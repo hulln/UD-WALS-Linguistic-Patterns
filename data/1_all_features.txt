@@ -1,0 +1,193 @@
+Id	Name	Area
+1A	Consonant Inventories	Phonology
+2A	Vowel Quality Inventories	Phonology
+3A	Consonant-Vowel Ratio	Phonology
+4A	Voicing in Plosives and Fricatives	Phonology
+5A	Voicing and Gaps in Plosive Systems	Phonology
+6A	Uvular Consonants	Phonology
+7A	Glottalized Consonants	Phonology
+8A	Lateral Consonants	Phonology
+9A	The Velar Nasal	Phonology
+10A	Vowel Nasalization	Phonology
+10B	Nasal Vowels in West Africa	Phonology
+11A	Front Rounded Vowels	Phonology
+12A	Syllable Structure	Phonology
+13A	Tone	Phonology
+14A	Fixed Stress Locations	Phonology
+15A	Weight-Sensitive Stress	Phonology
+16A	Weight Factors in Weight-Sensitive Stress Systems	Phonology
+17A	Rhythm Types	Phonology
+18A	Absence of Common Consonants	Phonology
+19A	Presence of Uncommon Consonants	Phonology
+20A	Fusion of Selected Inflectional Formatives	Morphology
+21A	Exponence of Selected Inflectional Formatives	Morphology
+21B	Exponence of Tense-Aspect-Mood Inflection	Morphology
+22A	Inflectional Synthesis of the Verb	Morphology
+23A	Locus of Marking in the Clause	Morphology
+24A	Locus of Marking in Possessive Noun Phrases	Morphology
+25A	Locus of Marking: Whole-language Typology	Morphology
+25B	Zero Marking of A and P Arguments	Morphology
+26A	Prefixing vs. Suffixing in Inflectional Morphology	Morphology
+27A	Reduplication	Morphology
+28A	Case Syncretism	Morphology
+29A	Syncretism in Verbal Person/Number Marking	Morphology
+30A	Number of Genders	Nominal Categories
+31A	Sex-based and Non-sex-based Gender Systems	Nominal Categories
+32A	Systems of Gender Assignment	Nominal Categories
+33A	Coding of Nominal Plurality	Nominal Categories
+34A	Occurrence of Nominal Plurality	Nominal Categories
+35A	Plurality in Independent Personal Pronouns	Nominal Categories
+36A	The Associative Plural	Nominal Categories
+37A	Definite Articles	Nominal Categories
+38A	Indefinite Articles	Nominal Categories
+39A	Inclusive/Exclusive Distinction in Independent Pronouns	Nominal Categories
+39B	Inclusive/Exclusive Forms in Pama-Nyungan	Nominal Categories
+40A	Inclusive/Exclusive Distinction in Verbal Inflection	Nominal Categories
+41A	Distance Contrasts in Demonstratives	Nominal Categories
+42A	Pronominal and Adnominal Demonstratives	Nominal Categories
+43A	Third Person Pronouns and Demonstratives	Nominal Categories
+44A	Gender Distinctions in Independent Personal Pronouns	Nominal Categories
+45A	Politeness Distinctions in Pronouns	Nominal Categories
+46A	Indefinite Pronouns	Nominal Categories
+47A	Intensifiers and Reflexive Pronouns	Nominal Categories
+48A	Person Marking on Adpositions	Nominal Categories
+49A	Number of Cases	Nominal Categories
+50A	Asymmetrical Case-Marking	Nominal Categories
+51A	Position of Case Affixes	Nominal Categories
+52A	Comitatives and Instrumentals	Nominal Categories
+53A	Ordinal Numerals	Nominal Categories
+54A	Distributive Numerals	Nominal Categories
+55A	Numeral Classifiers	Nominal Categories
+56A	Conjunctions and Universal Quantifiers	Nominal Categories
+57A	Position of Pronominal Possessive Affixes	Nominal Categories
+58A	Obligatory Possessive Inflection	Nominal Syntax
+58B	Number of Possessive Nouns	Nominal Syntax
+59A	Possessive Classification	Nominal Syntax
+60A	Genitives, Adjectives and Relative Clauses	Nominal Syntax
+61A	Adjectives without Nouns	Nominal Syntax
+62A	Action Nominal Constructions	Nominal Syntax
+63A	Noun Phrase Conjunction	Nominal Syntax
+64A	Nominal and Verbal Conjunction	Nominal Syntax
+65A	Perfective/Imperfective Aspect	Verbal Categories
+66A	The Past Tense	Verbal Categories
+67A	The Future Tense	Verbal Categories
+68A	The Perfect	Verbal Categories
+69A	Position of Tense-Aspect Affixes	Verbal Categories
+70A	The Morphological Imperative	Verbal Categories
+71A	The Prohibitive	Verbal Categories
+72A	Imperative-Hortative Systems	Verbal Categories
+73A	The Optative	Verbal Categories
+74A	Situational Possibility	Verbal Categories
+75A	Epistemic Possibility	Verbal Categories
+76A	Overlap between Situational and Epistemic Modal Marking	Verbal Categories
+77A	Semantic Distinctions of Evidentiality	Verbal Categories
+78A	Coding of Evidentiality	Verbal Categories
+79A	Suppletion According to Tense and Aspect	Verbal Categories
+79B	Suppletion in Imperatives and Hortatives	Verbal Categories
+80A	Verbal Number and Suppletion	Verbal Categories
+81A	Order of Subject, Object and Verb	Word Order
+81B	Languages with two Dominant Orders of Subject, Object, and Verb	Word Order
+82A	Order of Subject and Verb	Word Order
+83A	Order of Object and Verb	Word Order
+84A	Order of Object, Oblique, and Verb	Word Order
+85A	Order of Adposition and Noun Phrase	Word Order
+86A	Order of Genitive and Noun	Word Order
+87A	Order of Adjective and Noun	Word Order
+88A	Order of Demonstrative and Noun	Word Order
+89A	Order of Numeral and Noun	Word Order
+90A	Order of Relative Clause and Noun	Word Order
+90B	Prenominal relative clauses	Word Order
+90C	Postnominal relative clauses	Word Order
+90D	Internally-headed relative clauses	Word Order
+90E	Correlative relative clauses	Word Order
+90F	Adjoined relative clauses	Word Order
+90G	Double-headed relative clauses	Word Order
+91A	Order of Degree Word and Adjective	Word Order
+92A	Position of Polar Question Particles	Word Order
+93A	Position of Interrogative Phrases in Content Questions	Word Order
+94A	Order of Adverbial Subordinator and Clause	Word Order
+95A	Relationship between the Order of Object and Verb and the Order of Adposition and Noun Phrase	Word Order
+96A	Relationship between the Order of Object and Verb and the Order of Relative Clause and Noun	Word Order
+97A	Relationship between the Order of Object and Verb and the Order of Adjective and Noun	Word Order
+98A	Alignment of Case Marking of Full Noun Phrases	Simple Clauses
+99A	Alignment of Case Marking of Pronouns	Simple Clauses
+100A	Alignment of Verbal Person Marking	Simple Clauses
+101A	Expression of Pronominal Subjects	Simple Clauses
+102A	Verbal Person Marking	Simple Clauses
+103A	Third Person Zero of Verbal Person Marking	Simple Clauses
+104A	Order of Person Markers on the Verb	Simple Clauses
+105A	Ditransitive Constructions: The Verb 'Give'	Simple Clauses
+106A	Reciprocal Constructions	Simple Clauses
+107A	Passive Constructions	Simple Clauses
+108A	Antipassive Constructions	Simple Clauses
+108B	Productivity of the Antipassive Construction	Simple Clauses
+109A	Applicative Constructions	Simple Clauses
+109B	Other Roles of Applied Objects	Simple Clauses
+110A	Periphrastic Causative Constructions	Simple Clauses
+111A	Nonperiphrastic Causative Constructions	Simple Clauses
+112A	Negative Morphemes	Simple Clauses
+113A	Symmetric and Asymmetric Standard Negation	Simple Clauses
+114A	Subtypes of Asymmetric Standard Negation	Simple Clauses
+115A	Negative Indefinite Pronouns and Predicate Negation	Simple Clauses
+116A	Polar Questions	Simple Clauses
+117A	Predicative Possession	Simple Clauses
+118A	Predicative Adjectives	Simple Clauses
+119A	Nominal and Locational Predication	Simple Clauses
+120A	Zero Copula for Predicate Nominals	Simple Clauses
+121A	Comparative Constructions	Simple Clauses
+122A	Relativization on Subjects	Complex Sentences
+123A	Relativization on Obliques	Complex Sentences
+124A	'Want' Complement Subjects	Complex Sentences
+125A	Purpose Clauses	Complex Sentences
+126A	'When' Clauses	Complex Sentences
+127A	Reason Clauses	Complex Sentences
+128A	Utterance Complement Clauses	Complex Sentences
+129A	Hand and Arm	Lexicon
+130A	Finger and Hand	Lexicon
+130B	Cultural Categories of Languages with Identity of 'Finger' and 'Hand'	Lexicon
+131A	Numeral Bases	Lexicon
+132A	Number of Non-Derived Basic Colour Categories	Lexicon
+133A	Number of Basic Colour Categories	Lexicon
+134A	Green and Blue	Lexicon
+135A	Red and Yellow	Lexicon
+136A	M-T Pronouns	Lexicon
+136B	M in First Person Singular	Lexicon
+137A	N-M Pronouns	Lexicon
+137B	M in Second Person Singular	Lexicon
+138A	Tea	Lexicon
+139A	Irregular Negatives in Sign Languages	Sign Languages
+140A	Question Particles in Sign Languages	Sign Languages
+141A	Writing Systems	Other
+142A	Para-Linguistic Usages of Clicks	Other
+143A	Order of Negative Morpheme and Verb	Word Order
+143B	Obligatory Double Negation	Word Order
+143C	Optional Double Negation	Word Order
+143D	Optional Triple Negation	Word Order
+143E	Preverbal Negative Morphemes	Word Order
+143F	Postverbal Negative Morphemes	Word Order
+143G	Minor morphological means of signaling negation	Word Order
+144A	Position of Negative Word With Respect to Subject, Object, and Verb	Word Order
+144B	Position of negative words relative to beginning and end of clause and with respect to adjacency to verb	Word Order
+144C	Languages with different word order in negative clauses	Word Order
+144D	The Position of Negative Morphemes in SVO Languages	Word Order
+144E	Multiple Negative Constructions in SVO Languages	Word Order
+144F	Obligatory Double Negation in SVO languages	Word Order
+144G	Optional Double Negation in SVO languages	Word Order
+144H	NegSVO Order	Word Order
+144I	SNegVO Order	Word Order
+144J	SVNegO Order	Word Order
+144K	SVONeg Order	Word Order
+144L	The Position of Negative Morphemes in SOV Languages	Word Order
+144M	Multiple Negative Constructions in SOV Languages	Word Order
+144N	Obligatory Double Negation in SOV languages	Word Order
+144O	Optional Double Negation in SOV languages	Word Order
+144P	NegSOV Order	Word Order
+144Q	SNegOV Order	Word Order
+144R	SONegV Order	Word Order
+144S	SOVNeg Order	Word Order
+144T	The Position of Negative Morphemes in Verb-Initial Languages	Word Order
+144U	Double negation in verb-initial languages	Word Order
+144V	Verb-Initial with Preverbal Negative	Word Order
+144W	Verb-Initial with Negative that is Immediately Postverbal or between Subject and Object	Word Order
+144X	Verb-Initial with Clause-Final Negative	Word Order
+144Y	The Position of Negative Morphemes in Object-Initial Languages	Word Order
