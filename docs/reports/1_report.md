@@ -1,6 +1,7 @@
-# Project Workflow
+# Midterm Report #1
+(updated: 2024-11-20)
 
-### Step 1: Repository Creation and Data Preparation (Observed Data from WALS)
+### Repository Creation and Data Preparation (Observed Data from WALS)
 
 The first step was to create a GitHub repository to document the work as we progressed. The next step involved gathering feature data from WALS to prepare the foundation for working with Slovenian data.
 
