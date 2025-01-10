@@ -2,6 +2,15 @@
 
 ## Overview
 
+This repository was created as part of a university project for the [*Digital Linguistics Project*](https://theta.ffzg.hr/ECTS/Predmet/Index/35946) course at the Faculty of Social Sciences and Humanities, University of Zagreb. The project aims to document and explore linguistic patterns using Universal Dependencies (UD) and the World Atlas of Language Structures (WALS).
+
+The project was divided into two phases:
+1. **Phase 1**: Contribution to a broader Slovenian linguistic project, involving the creation of a table mapping WALS features to UD queries.
+2. **Phase 2**: An independent analysis focusing on word order patterns in Slovenian, comparing written and spoken corpora.
+
+The repository serves as a transparent record of the work, including data processing scripts, [analysis results](#results-word-order-analysis), and relevant documentation.
+
+
 ## Table of Contents
 - [Overview](#overview)
 - [Getting Started](#getting-started)
@@ -11,6 +20,7 @@
   - [Installation](#installation)
   - [Running the Scripts](#running-the-scripts)
 - [Repository Structure](#repository-structure)
+- [Results: Word Order Analysis](#results-word-order-analysis)
 - [License](#license)
 - [Credits](#credits)
 
@@ -84,6 +94,23 @@ UD-WALS-Linguistic-Patterns
 ├── README.md                           # Repository guide
 └── LICENSE.txt                         # License
 ```
+
+## Results: Word Order Analysis
+
+The quantitative study conducted as part of this project reveals key differences in word order patterns between spoken and written Slovenian:
+
+- **Written Corpus (SSJ)**:
+  - Strong preference for SVO (Subject-Verb-Object), reflecting the structured syntax typical of written language and aligning with the WALS value for Slovenian.
+- **Spoken Corpus (SST)**:
+  - Greater variation, with word orders such as SOV, OSV, and OVS appearing more often.
+
+### Interpretation
+- Written language prioritizes unmarked SVO for clarity and consistency.
+- Spoken language is more flexible, using varied word orders to emphasize topics or structure information.
+- These findings highlight the adaptability of spoken syntax and the influence of pragmatics on word order, emphasizing the need to revisit and update outdated WALS feature values.
+
+### Outputs
+Visualizations and analysis results are available in `data/results/` and in the paper draft located at `docs/projekt_zg.v1.pdf`.
 
 ## License
 
