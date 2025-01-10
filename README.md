@@ -71,28 +71,29 @@ python scripts/[script_name].py
 ```bash
 UD-WALS-Linguistic-Patterns
 │
-├── data/                               # Data files
-│   ├── extracted/                      # Processed datasets
-│   ├── features/                       # Feature data and visualizations
-│   ├── results/                        # Analysis outputs
-│   ├── src/                            # Raw CoNLL-U files
+├── data/                                 # Data files
+│   ├── extracted/                        # Processed datasets
+│   ├── features/                         # Feature data and visualizations
+│   ├── results/                          # Analysis outputs
+│   ├── src/                              # Raw CoNLL-U files
 │
-├── docs/                               # Documentation
-│   ├── reports/                        # Reports and drafts
-│   ├── project_proposal.pdf            # Project proposal
-│   ├── projekt_zg.v1.pdf               # Draft paper
+├── docs/                                 # Documentation
+│   ├── reports/                          # Reports and drafts
+│   ├── project_proposal.pdf              # Project proposal
+│   ├── projekt_zg.v1.pdf                 # Draft paper
+│   ├── qualitative_analysis_proposal.md  # Qualitative analysis proposal
 │
-├── scripts/                            # Python scripts
-│   ├── 1_compare_features.py           # Compare features
-│   ├── 2_fix_and_validate_conllu.py    # Fix and validate CoNLL-U files
-│   ├── 3_remove_punct_conllu.py        # Remove punctuation
-│   ├── 4_clean_stark_word_order.py     # Process word order
-│   ├── 5_combine_both_processed.py     # Merge datasets
-│   ├── 6_analyze_processed.py          # Analyze corpora
+├── scripts/                              # Python scripts
+│   ├── 1_compare_features.py             # Compare features
+│   ├── 2_fix_and_validate_conllu.py      # Fix and validate CoNLL-U files
+│   ├── 3_remove_punct_conllu.py          # Remove punctuation
+│   ├── 4_clean_stark_word_order.py       # Process word order
+│   ├── 5_combine_both_processed.py       # Merge datasets
+│   ├── 6_analyze_processed.py            # Analyze corpora
 │
-├── requirements.txt                    # Dependencies
-├── README.md                           # Repository guide
-└── LICENSE.txt                         # License
+├── requirements.txt                      # Dependencies
+├── README.md                             # Repository guide
+└── LICENSE.txt                           # License
 ```
 
 ## Results: Word Order Analysis
