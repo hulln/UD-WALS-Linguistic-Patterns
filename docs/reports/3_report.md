@@ -40,3 +40,7 @@ A major takeaway from this project was the creation of a [GitHub repository](htt
 ## Conclusion
 
 Throughout the project, I faced some challenges, including needing more support from colleagues, but I also learned a lot about the topic and gained new skills in data analysis, programming, and academic writing. While the results may not be groundbreaking, I maybe plan to expand the analysis in the future, possibly focusing on rarer linguistic relations and aiming for publication.
+
+## Next Steps: Qualitative Analysis
+
+As described in the [Qualitative Analysis Proposal](./qualitative_analysis_proposal.md), an interesting next step would be a qualitative analysis by comparing word order patterns (V, S, O) in spoken (SST) and written (SSJ) corpora. This would include proportional sampling of 100 examples, matching selected examples to full sentences in the original corpora, and generating a structured dataset for analysis. Focus areas would include comparing word order patterns, lexical choices, and sociolinguistic influences, with manual validation ensuring accuracy. This phase would deepen insights into linguistic variability and contextual differences across the two corpora.
