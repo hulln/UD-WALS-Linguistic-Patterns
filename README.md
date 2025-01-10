@@ -128,7 +128,10 @@ For more details, please refer to the full license text.
 - **[Nives Hüll](https://hulln.github.io/)** (nh23084@student.uni-lj.si, nhull@m.ffzg.hr)
 
 ### Acknowledgments
-- Special thanks to [Kaja Dobrovoljc](https://kajad.github.io/) for the opportunity to contribute to their project, which is part of the broader [Gravitacija Project](https://www.aris-rs.si/sl/medn/gravity/predstavitev.asp), a Slovenian initiative providing valuable resources and inspiration for research in syntactic typology and universal dependencies. I also thank [Luka Terčon](https://www.fri.uni-lj.si/sl/o-fakulteti/osebje/luka-tercon) for all support, guidance, and assistance during the project.
+- Special thanks to [Kaja Dobrovoljc](https://kajad.github.io/) for the opportunity to contribute to their project, which is part of the broader [Gravitacija Project](https://www.aris-rs.si/sl/medn/gravity/predstavitev.asp), a Slovenian initiative providing valuable resources and inspiration for research in syntactic typology and universal dependencies. I also thank [Luka Terčon](https://www.fri.uni-lj.si/sl/o-fakulteti/osebje/luka-tercon) for the support and guidance during the project.
+
+- Thanks also to [Petra Bago](https://theta.ffzg.hr/ECTS/Osoba/Index/2883), professor of the *Digital Linguistics Project* course, for the encouragement and support throughout the project.
+
 
 
 ### Resources
