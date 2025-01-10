@@ -19,6 +19,11 @@
 - **Libraries**: The following Python libraries are needed:
   - `matplotlib`
   - `pandas`
+  - `seaborn`
+  - `numpy`
+  - `scipy`
+  - `conllu`
+  - `scikit-learn`
 
 You can install the required libraries using the `requirements.txt` file provided in the repository.
 
@@ -48,7 +53,7 @@ pip install -r requirements.txt
 To run the scripts, navigate to the project directory and run:
 
 ```bash
-python scripts/2_compare_features.py
+python scripts/[script_name].py
 ```
 
 ## Repository Structure
@@ -56,28 +61,28 @@ python scripts/2_compare_features.py
 ```bash
 UD-WALS-Linguistic-Patterns
 │
-├── data/                                 # Data files
-│   ├── 1_all_features.txt                # List of all linguistic features
-│   ├── 1_slovene_features.txt            # Linguistic features specific to Slovenian
-│   ├── 2_feature_distribution_plot.png   # Plot of feature distribution
-│   ├── 2_slovene_features_info.csv       # Information on Slovenian linguistic features
+├── data/                               # Data files
+│   ├── extracted/                      # Processed datasets
+│   ├── features/                       # Feature data and visualizations
+│   ├── results/                        # Analysis outputs
+│   ├── src/                            # Raw CoNLL-U files
 │
-├── scripts/                              # Scripts for data processing
-│   ├── 1_get_data.py                     # Data extraction script (currently non-functional)
-│   ├── 2_compare_features.py             # Script for comparing Slovenian vs. all features
+├── docs/                               # Documentation
+│   ├── reports/                        # Reports and drafts
+│   ├── project_proposal.pdf            # Project proposal
+│   ├── projekt_zg.v1.pdf               # Draft paper
 │
-├── docs/                                 # Documentation files
-│   ├── project_proposal.pdf              # Project proposal PDF
-│   └── reports/                          # Reports related to the project
-│       └── 1_report.md                   # First report detailing project progress
+├── scripts/                            # Python scripts
+│   ├── 1_compare_features.py           # Compare features
+│   ├── 2_fix_and_validate_conllu.py    # Fix and validate CoNLL-U files
+│   ├── 3_remove_punct_conllu.py        # Remove punctuation
+│   ├── 4_clean_stark_word_order.py     # Process word order
+│   ├── 5_combine_both_processed.py     # Merge datasets
+│   ├── 6_analyze_processed.py          # Analyze corpora
 │
-├── requirements.txt                      # Dependencies
-│
-├── README.md                             # Project overview and setup instructions
-│
-├── LICENSE.txt                           # Apache License 2.0 for the project
-│
-└── .gitignore                            # Files/folders to ignore in version control
+├── requirements.txt                    # Dependencies
+├── README.md                           # Repository guide
+└── LICENSE.txt                         # License
 ```
 
 ## License
@@ -96,24 +101,24 @@ For more details, please refer to the full license text.
 - **[Nives Hüll](https://hulln.github.io/)** (nh23084@student.uni-lj.si, nhull@m.ffzg.hr)
 
 ### Acknowledgments
-- Special thanks to [Kaja Dobrovoljc](https://kajad.github.io/) for giving me the opportunity to work on their project and for the invaluable guidance and support throughout the entire process.
+- Special thanks to [Kaja Dobrovoljc](https://kajad.github.io/) for the opportunity to contribute to their project, which is part of the broader [Gravitacija Project](https://www.aris-rs.si/sl/medn/gravity/predstavitev.asp), a Slovenian initiative providing valuable resources and inspiration for research in syntactic typology and universal dependencies. I also thank [Luka Terčon](https://www.fri.uni-lj.si/sl/o-fakulteti/osebje/luka-tercon) for all support, guidance, and assistance during the project.
+
 
 ### Resources
 - **Libraries**: 
   - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for web scraping and parsing HTML.
-  - [Matplotlib](https://matplotlib.org/) for creating static, animated, and interactive visualizations in Python.
+  - [Matplotlib](https://matplotlib.org/) for visualizations.
   - [Pandas](https://pandas.pydata.org/) for data manipulation and analysis.
-  
-- **References**:
-  - [**Gravitacija Project**](https://www.aris-rs.si/sl/medn/gravity/predstavitev.asp)
-  - [**Multilingual Gradient Word-Order Typology (EACL 2024)**](https://aclanthology.org/2024.eacl-short.6)
-  - [**Universal Dependencies (UD)**](https://universaldependencies.org/)
-  - [**World Atlas of Language Structures (WALS)**](https://wals.info/)
+  - [Seaborn](https://seaborn.pydata.org/) for statistical data visualization.
+  - [NumPy](https://numpy.org/) for numerical computing.
+  - [SciPy](https://scipy.org/) for scientific computing.
+  - [Conllu](https://pypi.org/project/conllu/) for processing CoNLL-U files.
+  - [Scikit-learn](https://scikit-learn.org/) for machine learning utilities.
 
 ### Tools
-- [**ChatGPT**](https://chat.openai.com/) for assistance with coding, debugging, and support with project-related tasks.
+- [**ChatGPT**](https://chat.openai.com/) for coding, debigging, and writing assistance.
 - [**GitHub**](https://github.com/) for version control and collaboration.
-- [**Grew-match Tool**](https://match.grew.fr/) for matching and identifying syntactic structures in corpora.
+- [**Grew-match**](https://match.grew.fr/) for syntactic structure identification in corpora.
 - [**Python**](https://www.python.org/) for data processing and analysis.
-- [**Q-CAT Tool**](https://slovnica.ijs.si/wp-content/uploads/2019/10/Q-CAT_prirocnik.pdf) for syntactic categorization and feature annotation.
-- [**STARK Tool**](https://github.com/clarinsi/STARK) for syntactic analysis and pattern extraction in linguistic corpora.
+- [**Q-CAT**](https://slovnica.ijs.si/wp-content/uploads/2019/10/Q-CAT_prirocnik.pdf) for syntactic categorization.
+- [**STARK**](https://github.com/clarinsi/STARK) for linguistic corpus processing.
