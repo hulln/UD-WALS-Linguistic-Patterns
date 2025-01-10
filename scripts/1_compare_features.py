@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data from the 'data' folder
-all_features = pd.read_csv("data/1_all_features.txt", sep="\t")
-slovene_features = pd.read_csv("data/1_slovene_features.txt", sep="\t")
+all_features = pd.read_csv("data/features/all_features.txt", sep="\t")
+slovene_features = pd.read_csv("data/features/slovene_features.txt", sep="\t")
 
 # Find common and missing IDs
 common_ids = set(all_features['Id']).intersection(set(slovene_features['Id']))
@@ -36,7 +36,7 @@ plt.legend(title='Slovene Status', labels=['Missing (N)', 'Present (Y)'])
 plt.tight_layout()
 
 # Save the plot as a PNG file
-plt.savefig("data/2_feature_distribution_plot.png")
+plt.savefig("data/feature_distribution_plot.png")
 
 # Show the plot (optional)
 # plt.show()
@@ -51,5 +51,5 @@ print(all_features['Area'].value_counts())
 print("\nSlovene Features - Area Counts:")
 print(slovene_features['Area'].value_counts())
 
-print("\nCSV 'data/2_slovene_features_info.csv' has been created.")
-print("\nPlot saved as 'data/2_feature_distribution_plot.png'.")
+print("\nCSV 'data/features/slovene_features_info.csv' has been created.")
+print("\nPlot saved as 'data/features/feature_distribution_plot.png'.")
