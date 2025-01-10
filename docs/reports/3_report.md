@@ -35,7 +35,7 @@ Although the findings from this research may not yet be ready for publication, I
 
 ## Additional Contributions
 
-A major takeaway from this project was the creation of a GitHub repository, where I organized the code and documentation in a clear and consistent way. This experience taught me how to design good GitHub repositories, which will be useful for future research and collaboration.
+A major takeaway from this project was the creation of a [GitHub repository](https://github.com/hulln/UD-WALS-Linguistic-Patterns), where I organized the code and documentation in a clear, consistent, and transparent way. This experience taught me how to design GitHub repositories, which will be useful for future research and collaboration.
 
 ## Conclusion
 
