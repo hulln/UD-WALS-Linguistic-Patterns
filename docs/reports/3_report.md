@@ -44,3 +44,7 @@ Throughout the project, I faced some challenges, including needing more support 
 ## Next Steps: Qualitative Analysis
 
 As described in the [Qualitative Analysis Proposal](./qualitative_analysis_proposal.md), an interesting next step would be a qualitative analysis by comparing word order patterns (V, S, O) in spoken (SST) and written (SSJ) corpora. This would include proportional sampling of 100 examples, matching selected examples to full sentences in the original corpora, and generating a structured dataset for analysis. Focus areas would include comparing word order patterns, lexical choices, and sociolinguistic influences, with manual validation ensuring accuracy. This phase would deepen insights into linguistic variability and contextual differences across the two corpora.
+
+## Acknowledgments
+
+In this project, the following generative AI tools were used: [ChatGPT](https://chat.openai.com) for generating and debugging code, as well as enhancing the language quality of written content; [Perplexity](https://www.perplexity.ai) for conducting literature reviews by identifying and summarizing relevant sources; and [Codeium](https://codeium.com/) for providing coding assistance. All core ideas, research design, and conclusions were independently developed and remain my own.
