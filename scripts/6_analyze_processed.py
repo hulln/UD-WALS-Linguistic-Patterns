@@ -1,10 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics.pairwise import cosine_similarity
+from scipy.stats import entropy, pearsonr, spearmanr, chi2_contingency
+from scipy.spatial.distance import jensenshannon
+from numpy.linalg import norm
 import numpy as np
-from scipy.special import digamma
-from scipy.stats import dirichlet, chi2_contingency
 
 # Function to save plots
 def save_plot(fig_path, dpi=300):
@@ -41,7 +41,7 @@ print(f"Proportional distribution plot saved to: {freq_fig_path}")
 
 # Section 2: Dominant Word Orders
 def find_dominant_order(group):
-    print("\nProcessing a new group...")
+    print("\n--- Processing a new group ---")
     print("This group contains data for one specific corpus (e.g., SSJ or SST):")
     print(group)  # Display the current subset (group) being processed
 
@@ -77,11 +77,11 @@ def find_dominant_order(group):
 print("\nGrouping data by 'Corpus' and determining the dominant pattern for each corpus...")
 dominant_orders = pattern_counts.groupby('Corpus').apply(find_dominant_order).reset_index(name='Dominant_Order')
 
-print("\nFinal Result: Dominant Orders by Corpus")
+print("\n--- Final Result: Dominant Orders by Corpus ---")
 print(dominant_orders)
 
-# Section 3: Proportions and Cosine Similarity
-print("\n--- Section 3: Proportions and Cosine Similarity ---")
+# Section 3: Proportions and Distribution Comparisons
+print("\n--- Section 3: Proportions and Distribution Comparisons ---")
 
 # Step 1: Extract proportions for SSJ
 print("\nStep 1: Extracting proportion values for SSJ corpus...")
@@ -95,14 +95,31 @@ sst_vector = pattern_counts[pattern_counts['Corpus'] == 'SST']['Proportion'].val
 print("Proportions for SST:")
 print(sst_vector)
 
-# Step 3: Compute cosine similarity
+# Step 3: Calculate distribution comparisons
+print("\nStep 3: Calculating distribution comparisons...")
 try:
-    print("\nStep 3: Calculating cosine similarity between the two vectors...")
-    similarity = cosine_similarity([ssj_vector], [sst_vector])[0][0]
-    print(f"Cosine Similarity between SSJ and SST: {similarity}")
-except ValueError:
-    print("\nError: Vectors must have the same length for cosine similarity calculation.")
-    print(f"SSJ vector length: {len(ssj_vector)}, SST vector length: {len(sst_vector)}")
+    # Jensen-Shannon Divergence
+    js_divergence = jensenshannon(ssj_vector, sst_vector)
+    print(f"Jensen-Shannon Divergence: {js_divergence}")
+
+    # Entropy
+    ssj_entropy = entropy(ssj_vector)
+    sst_entropy = entropy(sst_vector)
+    print(f"Entropy for SSJ: {ssj_entropy}, Entropy for SST: {sst_entropy}")
+
+    # Pearson Correlation
+    correlation, _ = pearsonr(ssj_vector, sst_vector)
+    print(f"Pearson Correlation: {correlation}")
+
+    # Spearman Rank Correlation
+    rank_correlation, _ = spearmanr(ssj_vector, sst_vector)
+    print(f"Spearman Rank Correlation: {rank_correlation}")
+
+    # Euclidean Distance
+    euclidean_distance = norm(ssj_vector - sst_vector)
+    print(f"Euclidean Distance: {euclidean_distance}")
+except ValueError as e:
+    print(f"Error in distribution comparisons: {e}")
 
 # Section 4: Proportional Differences
 print("\n--- Section 4: Proportional Differences ---")
@@ -142,76 +159,8 @@ print("- The pivot table aligns proportions for each word order pattern across t
 print("- The 'Difference' column shows how much more frequent each pattern is in SST compared to SSJ.")
 print("- Positive values in the heatmap indicate patterns more frequent in SST, while negative values indicate patterns more frequent in SSJ.")
 
-# Section 5: Continuous Analysis with Probabilistic Modeling
-print("\n--- Section 5: Continuous Analysis with Probabilistic Modeling ---")
-
-# Step 1: Define the function to fit Dirichlet parameters
-def fit_dirichlet(data, tol=1e-6, max_iter=1000):
-    data = np.array(data)
-    n, k = data.shape
-    alpha = np.ones(k)  # Initialize alpha parameters
-    for _ in range(max_iter):
-        alpha_old = alpha
-        # Gradient and Hessian calculations
-        g = n * (digamma(np.sum(alpha)) - digamma(alpha)) + np.sum(np.log(data), axis=0)
-        h = -n * (digamma(np.sum(alpha) + 1) - digamma(alpha + 1))
-        alpha = alpha_old - g / h  # Newton-Raphson update
-        alpha = np.maximum(alpha, 1e-6)  # Ensure no values are negative
-        if np.linalg.norm(alpha - alpha_old) < tol:
-            break
-    return alpha
-
-# Step 2: Extract proportions for SSJ and SST
-print("\nStep 2: Extracting proportions for SSJ and SST...")
-ssj_proportions = pattern_counts[pattern_counts['Corpus'] == 'SSJ']['Proportion'].values.reshape(1, -1)
-sst_proportions = pattern_counts[pattern_counts['Corpus'] == 'SST']['Proportion'].values.reshape(1, -1)
-print("SSJ proportions:", ssj_proportions)
-print("SST proportions:", sst_proportions)
-
-# Step 3: Fit Dirichlet parameters
-print("\nStep 3: Fitting Dirichlet parameters for SSJ and SST...")
-ssj_alpha = fit_dirichlet(ssj_proportions)
-sst_alpha = fit_dirichlet(sst_proportions)
-print("Fitted Dirichlet parameters for SSJ:", ssj_alpha)
-print("Fitted Dirichlet parameters for SST:", sst_alpha)
-
-# Step 4: Calculate expected proportions and variability
-print("\nStep 4: Calculating expected proportions and variability...")
-ssj_expected = dirichlet.mean(ssj_alpha)
-sst_expected = dirichlet.mean(sst_alpha)
-ssj_variability = dirichlet.var(ssj_alpha)**0.5  # Standard deviation
-sst_variability = dirichlet.var(sst_alpha)**0.5
-print("SSJ expected proportions:", ssj_expected)
-print("SST expected proportions:", sst_expected)
-print("SSJ variability:", ssj_variability)
-print("SST variability:", sst_variability)
-
-# Step 5: Visualize the expected proportions
-print("\nStep 5: Creating a bar plot for expected proportions...")
-patterns = pattern_counts['Pattern'].unique()
-x = np.arange(len(patterns))
-fig, ax = plt.subplots(figsize=(8, 6))
-ax.bar(x - 0.2, ssj_expected, width=0.4, label='SSJ', yerr=ssj_variability, capsize=4)
-ax.bar(x + 0.2, sst_expected, width=0.4, label='SST', yerr=sst_variability, capsize=4)
-ax.set_xticks(x)
-ax.set_xticklabels(patterns, rotation=45)
-ax.set_title('Expected Proportions and Variability')
-ax.set_ylabel('Proportion')
-ax.legend()
-ax.grid(axis='y', linestyle='--', linewidth=0.5, alpha=0.7)
-dirichlet_fig_path = 'data/results/dirichlet_expected_proportions.png'
-save_plot(dirichlet_fig_path)
-print(f"Dirichlet expected proportions plot saved to: {dirichlet_fig_path}")
-
-# Interpretation
-print("\nInterpretation:")
-print("- The Dirichlet distribution models the proportions of patterns in each corpus.")
-print("- The fitted alpha parameters indicate the strength of each pattern's influence in the distribution.")
-print("- Expected proportions represent the central tendency for each pattern.")
-print("- Variability (error bars) reflects how much variation is expected around the mean proportions.")
-
-# Section 6: Chi-Square Test
-print("\n--- Section 6: Chi-Square Test ---")
+# Section 5: Chi-Square Test
+print("\n--- Section 5: Chi-Square Test ---")
 
 # Step 1: Create a contingency table
 print("\nStep 1: Creating a contingency table with observed counts for each pattern in SSJ and SST...")
