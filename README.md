@@ -34,9 +34,9 @@ The repository serves as a transparent record of the work, including data proces
   - `scipy`
   - `conllu`
   - `scikit-learn`
+  - `streamlit`
 
-You can install the required libraries using the `requirements.txt` file provided in the repository.
-
+Install the required libraries using the `requirements.txt` file provided in the repository.
 
 ### System Information
 - **Operating System:** Windows 11
@@ -70,7 +70,8 @@ python scripts/[script_name].py
 
 ```bash
 UD-WALS-Linguistic-Patterns
-│
+├── app/
+│   ├── app.py                            # Streamlit app
 ├── data/                                 # Data files
 │   ├── extracted/                        # Processed datasets
 │   ├── features/                         # Feature data and visualizations
