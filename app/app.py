@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.markdown("# WALS Linguistic Features Explorer", unsafe_allow_html=True)
 
 # Load the data
-df = pd.read_csv('features_explorer_app/features_table.tsv', sep='\t')
+df = pd.read_csv('app/features_table.tsv', sep='\t')
 
 # Initialize session state for search and selected area if not already set
 if 'search_query' not in st.session_state:
