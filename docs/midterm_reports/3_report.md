@@ -1,4 +1,4 @@
-# Final Report #3
+# Midterm Report #3
 (updated: 2025-01-15)
 
 This is the final report of the work done in the project. It was divided into two main phases: the first phase involved extracting features from the WALS database and creating UD queries and linguistic questions, while the second phase focused on reviewing literature and carrying out my own analysis focusing on a specific WALS feature.
