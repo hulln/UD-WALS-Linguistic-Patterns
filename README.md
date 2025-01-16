@@ -133,8 +133,6 @@ For more details, please refer to the full license text.
 
 - Thanks also to [Petra Bago](https://theta.ffzg.hr/ECTS/Osoba/Index/2883), professor of the *Digital Linguistics Project* course, for the encouragement and support throughout the project.
 
-
-
 ### Resources
 - **Libraries**: 
   - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for web scraping and parsing HTML.
@@ -145,6 +143,7 @@ For more details, please refer to the full license text.
   - [SciPy](https://scipy.org/) for scientific computing.
   - [Conllu](https://pypi.org/project/conllu/) for processing CoNLL-U files.
   - [Scikit-learn](https://scikit-learn.org/) for machine learning utilities.
+  - [Streamlit](https://streamlit.io/) for interactive web applications.
 
 ### Tools
 - [**ChatGPT**](https://chat.openai.com/) for coding, debigging, and writing assistance.
