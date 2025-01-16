@@ -112,7 +112,7 @@ The quantitative study conducted as part of this project reveals key differences
 - These findings highlight the adaptability of spoken syntax and the influence of pragmatics on word order, emphasizing the need to revisit and update outdated WALS feature values.
 
 ### Outputs
-Visualizations and analysis results are available in `data/results/` and in the paper draft located at `docs/projekt_zg.v1.pdf`.
+Visualizations and analysis results are available in `data/results/` and in the paper draft located at `docs/paper_v1.pdf`.
 
 ## License
 
