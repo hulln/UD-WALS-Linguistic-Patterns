@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Order Distribution (Subject-Object-Verb)</title>
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 700px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chartdiv"></div>
+  
+  <!-- amCharts 5 core -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <!-- amCharts 5 XY chart -->
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <!-- amCharts 5 themes -->
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <!-- amCharts 5 Exporting Plugin -->
+  <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
+  
+  <script>
+  am5.ready(function() {
+    // Root + Theme
+    var root = am5.Root.new("chartdiv");
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Chart
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      paddingLeft: 20,
+      layout: root.verticalLayout
+    }));
+
+    // Add a centered title at the top
+    chart.children.unshift(am5.Label.new(root, {
+      text: "Word Order Distribution (Subject-Object-Verb)",
+      fontSize: 22,
+      fontWeight: "bold",
+      textAlign: "center",
+      x: am5.p50,
+      centerX: am5.p50,
+      marginBottom: 20
+    }));
+
+    // Data reordered with dummy rows kept
+    var data = [
+      { "language": "English", "modality": "Written", "category": "English\nWritten", "SVO": 0.9737, "SOV": 0,      "OSV": 0.0263, "OVS": 0,      "VSO": 0,      "VOS": 0 },
+      { "language": "English", "modality": "Spoken",  "category": "English\nSpoken",  "SVO": 0.9295, "SOV": 0,      "OSV": 0.0688, "OVS": 0.0013, "VSO": 0,      "VOS": 0 },
+      { "dummy": true,        "category": "",           "SVO": 0,      "SOV": 0,      "OSV": 0,      "OVS": 0,      "VSO": 0,      "VOS": 0 },
+      { "language": "French",  "modality": "Written", "category": "French\nWritten",  "SVO": 0.8449, "SOV": 0.1016, "OSV": 0.0407, "OVS": 0.0098, "VSO": 0.0023, "VOS": 0.0006 },
+      { "language": "French",  "modality": "Spoken",  "category": "French\nSpoken",   "SVO": 0.7115, "SOV": 0.1905, "OSV": 0.0868, "OVS": 0.0093, "VSO": 0.0019, "VOS": 0 },
+      { "dummy": true,        "category": "",           "SVO": 0,      "SOV": 0,      "OSV": 0,      "OVS": 0,      "VSO": 0,      "VOS": 0 },
+      { "language": "Slovenian", "modality": "Written", "category": "Slovenian\nWritten", "SVO": 0.5453, "SOV": 0.1093, "OSV": 0.0852, "OVS": 0.2114, "VSO": 0.0276, "VOS": 0.0212 },
+      { "language": "Slovenian", "modality": "Spoken",  "category": "Slovenian\nSpoken",  "SVO": 0.3916, "SOV": 0.2084, "OSV": 0.1557, "OVS": 0.1737, "VSO": 0.0467, "VOS": 0.0239 }
+    ];
+
+    // X Axis
+    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+      categoryField: "category",
+      renderer: am5xy.AxisRendererX.new(root, {
+        minGridDistance: 30,
+        cellStartLocation: 0.1,
+        cellEndLocation: 0.9
+      }),
+      tooltip: am5.Tooltip.new(root, {})
+    }));
+    xAxis.data.setAll(data);
+
+    // Center the category labels
+    xAxis.get("renderer").labels.template.setAll({
+      textAlign: "center",
+      centerX: am5.p50,
+      centerY: am5.p50,
+      rotation: 0
+    });
+
+    // Hide labels for dummy rows
+    xAxis.get("renderer").labels.template.adapters.add("visible", function(visible, target) {
+      if (target.dataItem && target.dataItem.dataContext && target.dataItem.dataContext.dummy) {
+        return false;
+      }
+      return true;
+    });
+
+    // Y Axis with grid lines removed
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      min: 0,
+      max: 100,
+      numberFormat: "#'%'",
+      strictMinMax: true,
+      calculateTotals: true,
+      renderer: am5xy.AxisRendererY.new(root, { strokeOpacity: 0 })
+    }));
+    
+    // Remove grid lines for both axes
+    xAxis.get("renderer").grid.template.setAll({
+      strokeOpacity: 0
+    });
+    yAxis.get("renderer").grid.template.setAll({
+      strokeOpacity: 0
+    });
+
+    // Legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.p50,
+      x: am5.p50,
+      marginTop: 40,
+      marginBottom: 40
+    }));
+
+    // Updated Color Set with a modern palette
+    var colors = am5.ColorSet.new(root, {
+      colors: [
+        am5.color("#4e79a7"), // blue
+        am5.color("#f28e2b"), // orange
+        am5.color("#e15759"), // red
+        am5.color("#76b7b2"), // teal
+        am5.color("#59a14f"), // green
+        am5.color("#edc949")  // yellow
+      ]
+    });
+
+    // Create series function
+    function makeSeries(name, field) {
+      var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: field,
+        valueYShow: "valueYTotalPercent",
+        categoryXField: "category",
+        fill: colors.next()
+      }));
+
+      series.columns.template.setAll({
+        tooltipText: "{valueYTotalPercent.formatNumber('#.0')}%",
+        tooltipY: am5.percent(10),
+        strokeOpacity: 0.5
+      });
+
+      series.data.setAll(data);
+      legend.data.push(series);
+      series.appear();
+    }
+
+    // Create all series
+    makeSeries("SVO", "SVO");
+    makeSeries("SOV", "SOV");
+    makeSeries("OSV", "OSV");
+    makeSeries("OVS", "OVS");
+    makeSeries("VSO", "VSO");
+    makeSeries("VOS", "VOS");
+
+    // Exporting: add an export menu to the chart
+    var exporting = am5plugins_exporting.Exporting.new(root, {
+      menu: am5plugins_exporting.ExportingMenu.new(root, {})
+    });
+
+    // Animate on load
+    chart.appear(1000, 100);
+  });
+  </script>
+</body>
+</html>
