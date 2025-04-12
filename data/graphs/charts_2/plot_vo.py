@@ -39,41 +39,42 @@ df.index = df.index.map(label_map)
 # Optional: sort by VO dominance
 df = df.sort_values(by="VO", ascending=True)
 
+# Muted and accessible color palette
+vo_color = "#5b8fa8"  # Muted blue
+ov_color = "#c66b5d"  # Muted red
+
 # Plot
 plt.figure(figsize=(11, 8), facecolor="white")
-plt.barh(df.index, df["VO"], color="#4a90e2", label="VO")
-plt.barh(df.index, df["OV"], left=df["VO"], color="#e94e77", label="OV")
+plt.barh(df.index, df["VO"], color=vo_color, label="VO")
+plt.barh(df.index, df["OV"], left=df["VO"], color=ov_color, label="OV")
 
 # Format
 plt.xlabel("Proportion", fontsize=11)
-plt.title("Verb–Object (VO) vs. Object–Verb (OV) Word Order by Language and Modality", fontsize=14, pad=20)
-plt.suptitle("W = written, S = spoken", y=0.91, fontsize=10, style="italic")
+plt.title("Verb–Object (VO) vs. Object–Verb (OV) Word Order by Language and Modality", fontsize=14, pad=30)
 plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:.0%}"))
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=10)
-plt.tick_params(axis='y', length=0)  # Remove those small horizontal lines
+plt.tick_params(axis='y', length=0)
+plt.tick_params(axis='x', length=0)
 
-# Remove chart border (spines)
+# Remove chart borders
 ax = plt.gca()
 for spine in ["top", "right", "left", "bottom"]:
     ax.spines[spine].set_visible(False)
 
-# Remove chart border (spines)
-ax = plt.gca()
-for spine in ["top", "right", "left", "bottom"]:
-    ax.spines[spine].set_visible(False)
-
-# Legend outside without frame
+# Legend centered under the title
 plt.legend(
-    title="Word Order",
-    bbox_to_anchor=(1.02, 1),
-    loc="upper left",
-    borderaxespad=0,
+    loc="upper center",
+    bbox_to_anchor=(0.5, 1.03),
+    ncol=2,
     frameon=False
 )
+
+# Disclaimer text below x-axis
+plt.figtext(0.5, -0.03, "W = written, S = spoken", ha="center", fontsize=9, style="italic")
 
 # Save
 plt.tight_layout()
 plt.savefig("data/graphs/charts_2/stacked_vo_ov_horizontal.png", dpi=300, bbox_inches="tight")
 plt.close()
-print("Horizontal stacked bar chart for VO/OV saved!")
+print("Horizontal stacked bar chart for VO/OV saved with updated colors!")
