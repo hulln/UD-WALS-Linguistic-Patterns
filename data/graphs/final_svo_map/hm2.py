@@ -113,7 +113,7 @@ def create_custom_heatmap(df, title, filename):
 
 # === RAW DATA: SVO ===
 
-svo_data = {
+svo_data_original = {
     "Word Order": ["SVO", "SOV", "OSV", "OVS", "VSO", "VOS"],
     "French Written": [0.8449, 0.1016, 0.0407, 0.0098, 0.0023, 0.0006],
     "French Spoken": [0.7115, 0.1905, 0.0868, 0.0093, 0.0019, 0],
@@ -127,12 +127,60 @@ svo_data = {
     "Norwegian Spoken (nynorsk)": [0.5948, 0.0093, 0.1235, 0.0975, 0.1736, 0.0013]
 }
 
+svo_data_noun = {
+    "Word Order": ["SVO", "SOV", "OSV", "OVS", "VSO", "VOS"],
+    "French Written": [0.9980, 0.0, 0.0, 0.0, 0.0, 0.0020],
+    "French Spoken": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "English Written": [0.9975, 0.0, 0.0025, 0.0, 0.0, 0.0],
+    "English Spoken": [0.9949, 0.0, 0.0051, 0.0, 0.0, 0.0],
+    "Slovenian Written": [0.7141, 0.0670, 0.0163, 0.1432, 0.0406, 0.0188],
+    "Slovenian Spoken": [0.6429, 0.1071, 0.0238, 0.1071, 0.0952, 0.0238],
+    "Spanish Written": [0.9664, 0.0, 0.0, 0.0117, 0.0048, 0.0171],
+    "Spanish Spoken": [0.75, 0.0, 0.0, 0.0, 0.0833, 0.1667],
+    "Norwegian Written (nynorsk)": [0.8861, 0.0005, 0.0161, 0.0044, 0.0929, 0.0],
+    "Norwegian Spoken (nynorsk)": [0.7879, 0.0303, 0.0303, 0.0303, 0.1212, 0.0]
+}
+
+svo_data_noun_propn = {
+    "Word Order": ["SVO", "SOV", "OSV", "OVS", "VSO", "VOS"],
+    "French Written": [0.9980, 0.0, 0.0003, 0.0, 0.0, 0.0016],
+    "French Spoken": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "English Written": [0.9974, 0.0, 0.0026, 0.0, 0.0, 0.0],
+    "English Spoken": [0.9916, 0.0, 0.0084, 0.0, 0.0, 0.0],
+    "Slovenian Written": [0.7144, 0.0704, 0.0185, 0.1420, 0.0374, 0.0173],
+    "Slovenian Spoken": [0.6350, 0.1200, 0.0200, 0.1150, 0.0850, 0.0250],
+    "Spanish Written": [0.9680, 0.0, 0.0007, 0.0112, 0.0044, 0.0157],
+    "Spanish Spoken": [0.7692, 0.0, 0.0, 0.0, 0.0769, 0.1538],
+    "Norwegian Written (nynorsk)": [0.8743, 0.0003, 0.0127, 0.0039, 0.1088, 0.0],
+    "Norwegian Spoken (nynorsk)": [0.7857, 0.0238, 0.0238, 0.0238, 0.1429, 0.0]
+}
+
 # === GENERATE THE SVO HEATMAP ===
+# --- assume svo_data_original / svo_data_noun / svo_data_noun_propn are defined as above ---
 
-create_custom_heatmap(
-    pd.DataFrame(svo_data),
-    "Distribution of Word Order Patterns Across Languages and Modalities",
-    "data/graphs/charts_2/custom_heatmap_svo.png"
-)
+jobs = [
+    (
+        pd.DataFrame(svo_data_original),
+        "Distribution of Word Order Patterns (ALL arguments)",
+        "data/graphs/final_svo_map/custom_heatmap_svo_all.png",
+        "Shows proportions of the six basic word-order patterns across languages/modalities "
+        "WITHOUT filtering argument types (all dependents counted)."
+    ),
+    (
+        pd.DataFrame(svo_data_noun),
+        "Distribution of Word Order Patterns (NOUN arguments only)",
+        "data/graphs/final_svo_map/custom_heatmap_svo_noun.png",
+        "Shows the same distribution but restricted to clauses where both core arguments are common nouns (NOUN)."
+    ),
+    (
+        pd.DataFrame(svo_data_noun_propn),
+        "Distribution of Word Order Patterns (NOUN + PROPN)",
+        "data/graphs/final_svo_map/custom_heatmap_svo_noun_propn.png",
+        "Shows the distribution when both common nouns (NOUN) and proper nouns (PROPN) are allowed as core arguments."
+    ),
+]
 
-print("SVO heatmap saved!")
+for df, title, path, description in jobs:
+    create_custom_heatmap(df, title, path)
+    print(f"Saved: {path}")
+    print(f"Description: {description}\n")
