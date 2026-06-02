@@ -1,0 +1,17 @@
+path,language,genre,source,model_or_group,original_folder,original_file
+ar_wikipedia_gpt-3.5-turbo.conllu,Arabic,AI,wikipedia,gpt-3.5-turbo,ar_wikipedia_gpt-3.5-turbo,ar_wikipedia_gpt-3.5-turbo.conllu
+ar_wikipedia_human.conllu,Arabic,Human,wikipedia,human,ar_wikipedia_human,ar_wikipedia_human.conllu
+bg_true-fake-news_gpt-3.5-turbo.conllu,Bulgarian,AI,true-fake-news,gpt-3.5-turbo,bg_true-fake-news_gpt-3.5-turbo,bg_true-fake-news_gpt-3.5-turbo.conllu
+bg_true-fake-news_human.conllu,Bulgarian,Human,true-fake-news,human,bg_true-fake-news_human,bg_true-fake-news_human.conllu
+en_wikipedia_gpt-3.5-turbo.conllu,English,AI,wikipedia,gpt-3.5-turbo,en_wikipedia_gpt-3.5-turbo,en_wikipedia_gpt-3.5-turbo.conllu
+en_wikipedia_human.conllu,English,Human,wikipedia,human,en_wikipedia_human,en_wikipedia_human.conllu
+id_newspapers_gpt-3.5-turbo.conllu,Indonesian,AI,newspapers,gpt-3.5-turbo,id_newspapers_gpt-3.5-turbo,id_newspapers_gpt-3.5-turbo.conllu
+id_newspapers_human.conllu,Indonesian,Human,newspapers,human,id_newspapers_human,id_newspapers_human.conllu
+ru_ruatd_gpt-3.5-turbo.conllu,Russian,AI,ruatd,gpt-3.5-turbo,ru_ruatd_gpt-3.5-turbo,ru_ruatd_gpt-3.5-turbo.conllu
+ru_ruatd_human.conllu,Russian,Human,ruatd,human,ru_ruatd_human,ru_ruatd_human.conllu
+sl_essays_gpt-5-grade4.conllu,Slovenian,AI,essays,gpt-5-grade4,sl_essays_gpt-5-grade4,4._letnik_spaces_deps_fixed.conllu
+sl_essays_human-grade4.conllu,Slovenian,Human,essays,human-grade4,sl_essays_human-grade4,4._letnik_spaces_deps_fixed.conllu
+ur_urdu-news_gpt-3.5-turbo.conllu,Urdu,AI,urdu-news,gpt-3.5-turbo,ur_urdu-news_gpt-3.5-turbo,ur_urdu-news_gpt-3.5-turbo.conllu
+ur_urdu-news_human.conllu,Urdu,Human,urdu-news,human,ur_urdu-news_human,ur_urdu-news_human.conllu
+zh_baike-web-qa_chatgpt.conllu,Chinese,AI,baike-web-qa,chatgpt,zh_baike-web-qa_chatgpt,zh_baike-web-qa_chatgpt.conllu
+zh_baike-web-qa_human.conllu,Chinese,Human,baike-web-qa,human,zh_baike-web-qa_human,zh_baike-web-qa_human.conllu

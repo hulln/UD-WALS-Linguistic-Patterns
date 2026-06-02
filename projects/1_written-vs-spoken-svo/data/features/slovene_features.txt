@@ -1,0 +1,44 @@
+Id	Feature	Value	Area
+14A	Fixed Stress Locations	No fixed stress	Phonology
+15A	Weight-Sensitive Stress	Unbounded: Stress can be anywhere	Phonology
+16A	Weight Factors in Weight-Sensitive Stress Systems	Prominence	Phonology
+17A	Rhythm Types	No rhythmic stress	Phonology
+26A	Prefixing vs. Suffixing in Inflectional Morphology	Strongly suffixing	Morphology
+33A	Coding of Nominal Plurality	Plural suffix	Nominal Categories
+51A	Position of Case Affixes	Case suffixes	Nominal Categories
+53A	Ordinal Numerals	First, second, three-th	Nominal Categories
+70A	The Morphological Imperative	Second singular and second plural	Verbal Categories
+71A	The Prohibitive	Normal imperative + normal negative	Verbal Categories
+72A	Imperative-Hortative Systems	Neither type of system	Verbal Categories
+73A	The Optative	Inflectional optative absent	Verbal Categories
+74A	Situational Possibility	Verbal constructions	Verbal Categories
+75A	Epistemic Possibility	Other	Verbal Categories
+76A	Overlap between Situational and Epistemic Modal Marking	Overlap for both possibility and necessity	Verbal Categories
+79A	Suppletion According to Tense and Aspect	Tense and aspect	Verbal Categories
+79B	Suppletion in Imperatives and Hortatives	None (= no suppletive imperatives reported in the reference material)	Verbal Categories
+80A	Verbal Number and Suppletion	None	Verbal Categories
+81A	Order of Subject, Object and Verb	SVO	Word Order
+82A	Order of Subject and Verb	SV	Word Order
+83A	Order of Object and Verb	VO	Word Order
+85A	Order of Adposition and Noun Phrase	Prepositions	Word Order
+86A	Order of Genitive and Noun	No dominant order	Word Order
+87A	Order of Adjective and Noun	Adjective-Noun	Word Order
+88A	Order of Demonstrative and Noun	Demonstrative-Noun	Word Order
+89A	Order of Numeral and Noun	Numeral-Noun	Word Order
+95A	Relationship between the Order of Object and Verb and the Order of Adposition and Noun Phrase	VO and Prepositions	Word Order
+97A	Relationship between the Order of Object and Verb and the Order of Adjective and Noun	VO and AdjN	Word Order
+101A	Expression of Pronominal Subjects	Subject affixes on verb	Simple Clauses
+112A	Negative Morphemes	Negative particle	Simple Clauses
+116A	Polar Questions	Question particle	Simple Clauses
+138A	Tea	Words derived from Sinitic cha	Lexicon
+143A	Order of Negative Morpheme and Verb	NegV	Word Order
+143E	Preverbal Negative Morphemes	NegV	Word Order
+143F	Postverbal Negative Morphemes	None	Word Order
+143G	Minor morphological means of signaling negation	None	Word Order
+144A	Position of Negative Word With Respect to Subject, Object, and Verb	SNegVO	Word Order
+144B	Position of negative words relative to beginning and end of clause and with respect to adjacency to verb	Immed preverbal	Word Order
+144D	The Position of Negative Morphemes in SVO Languages	SNegVO	Word Order
+144H	NegSVO Order	No NegSVO	Word Order
+144I	SNegVO Order	Word&NoDoubleNeg	Word Order
+144J	SVNegO Order	No SVNegO	Word Order
+144K	SVONeg Order	No SVONeg	Word Order

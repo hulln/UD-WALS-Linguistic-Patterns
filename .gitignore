@@ -1,0 +1,31 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# OS and sync metadata
+.DS_Store
+desktop.ini
+
+# Large local CoNLL-U corpus data
+*.conllu
+*.conllu.gz
+*.conll
+*.conll.gz
+
+# STARK working artifacts: regenerable and very large (1.3 GB + 692 MB here).
+# The kept TSVs (tsv/, chunk_tsv/) are enough to rebuild all tables and figures
+# via `run_stark_svo_analysis.py --process-only`.
+**/stark_svo_noun/internal_saves/
+**/stark_svo_noun/chunks/
+
+# Regenerable run artifacts that embed absolute machine paths (STARK invocations,
+# input/output file paths). Settings are documented in docs/svo_ai_human_workflow.md.
+**/stark_svo_noun/logs/
+**/stark_svo_noun/runtime/
+**/stark_svo_noun/chunk_logs/
+**/stark_svo_noun/chunk_runtime/
+**/data/results/*/input_files.csv
+**/data/results/*/analysis_config.json
+
+# Large regenerable per-instance validation dump (~32 MB)
+**/direct_validation/direct_svo_instances.tsv

@@ -1,0 +1,47 @@
+results: konkretni primer lahko da stark
+npr. vprašanja, ki zahtevajo drugačen vrstni red morda, v slovenščini tega npr. ni
+v ang mogoče tisti primer, ki ni tako običajen
+mogoče besedo pod besedo v tej tabeli, če bo kaj prostora
+
+discussion: razmislek oz. nastaviti hipoteze, ki jih v prihodnosti lahko kdo razišče
+google word order speech spoken language, najti kakšno referenco - skupno en odstavek
+po povzetku in širšimi implikacijami
+zakaj točno, zahteva več raziskav, ampak vidimo pa neke specifične stvari, ki vplivajo na vrstni red
+dodajalna narava govorjenega jezika npr. prilastki članek za slovenščino, mogoče splošno 
+
+https://github.com/clarinsi/STARK/blob/master/advanced.md#--detailed_results_file-
+lahko tudi prek grewmatch
+samo za te, ki so najbolj narasli v govoru, ne za vse
+preveriti, a je to v jeziku pričakovano, npr. posebnosti stave za te jezike
+
+heatmap bo kar moder, lahko pa odstavek, da ni usklajenih vzorcev znotraj jezikovnih skupin, ker je že v osnovi pisna podoba drugačna - done
+
+-----
+examples
+ 
+ENGLISH OSV
+While variation remains limited, the modest rise in OSV (from 2.6% to 6.9%) often reflects marked topicalization or question structure. Declarative examples such as “That we did this summer” and “That I give you” demonstrate how speakers foreground the object for emphasis. Additionally, spoken English includes many OSV-form questions like “What’s Bill doing now?” and “What did he say?”, contributing structurally to the pattern even though these are highly conventionalized forms.
+
+SPANISH SOV
+While Spanish is canonically SVO, the sharp rise in SOV structures (from 6.2% to 20.7%) reflects flexible ordering in spoken discourse. Declarative examples like las yuntas lo trillaban (“the oxen it threshed”) illustrate object-before-verb placement likely driven by discourse focus or rhythm. Interrogative constructions such as ¿Y el tren lo utilizaban...? (“And the train, they used it...?”) also contribute, where fronted objects are used for topic or contrast. These patterns suggest that spoken Spanish employs SOV-like structures pragmatically, supported by rich verbal morphology.
+
+SPANISH OVS
+OVS structures (rising from 5.5% to 19.8%) in spoken Spanish often appear in relative or complement clauses, as in cómo lo hacía su padre (“how it did your father”), where the object precedes the verb and the subject follows. Similarly, sentences like que nos la haga NP (“that it for us does NP”) show clitic-heavy constructions where pronouns cluster before the verb, leaving the subject at the end. These reordering patterns are supported by Spanish’s flexible syntax and rich morphology, and are frequently used to foreground the object or manage information flow in spontaneous speech.
+
+FRENCH SOV
+In French, the most notable shift is the increase in SOV structures, rising from 10.2% to 19.1% in speech. This increase often reflects the use of object pronouns placed before auxiliary verbs in complex verb constructions, which are very common in colloquial French. Spoken examples such as “on l’a mise à l’épreuve” ("we her put to the test") or “le secret, il est là” ("the secret, it is there") illustrate this pattern. The frequent use of left-dislocation and cleft constructions in speech further contributes to preverbal objects, making SOV structures more salient in spoken modality.
+
+FRENCH OSV
+Spoken French also shows an increase in OSV structures, from 4.1% to 8.7%, often driven by dislocation and pronoun fronting. Sentences like “je le mets également à l’intérieur” (“I it put also inside”) and “on l’a mise à l’épreuve” (“we her put to the test”) reflect the typical French structure where object pronouns precede the verb. While grammatically expected, their higher frequency in speech highlights the conversational tendency to maintain referents in focus and streamline communication through clitic positioning and emphasis.
+
+NORWEGIAN OSV
+While OSV structures increase modestly in Norwegian speech (from 2.7% to 12.3%), they primarily occur in question contexts, where the object is fronted for topical or interrogative emphasis. Examples such as “Kva den kallast den fóra?” (“What that is called, that feed?”) and “Mosefaret har du høyrt?” (“Have you heard of the moss path?”) show how the object appears clause-initially, followed by the subject and then the verb. These are conventional patterns in Norwegian interrogatives and do not signal unusual syntactic flexibility, but their frequency in speech contributes to the increased OSV count.
+
+NORWEGIAN OVS
+OVS word order also rises in speech (from 2.2% to 9.8%), mostly in pragmatically marked declaratives. Examples like “Det veit eg ikkje” (“That I don’t know”) and “Det gjorde dei” (“That they did”) show how the object is fronted to mark focus or emphasis, often repeating known or contrastive information. These constructions are common in spontaneous discourse for structuring known–new information and align with the prosodically flexible nature of spoken Norwegian. Unlike OSV, these do not follow question patterns but instead reflect discourse-driven reordering typical of informal speech.
+
+SLOVENIAN SOV
+Slovenian shows a striking increase in SOV structures in speech, rising from 10.9% in written texts to 20.8% in spoken data. This shift often reflects the language’s pragmatic flexibility and discourse-driven organization, especially when speakers place short or pronominal subjects and objects before deferring the verb for effect. Examples like “Fajn, a ne, nekako svet se tebi prilagaja” or “To mi je šlo zelo na živce” illustrate how SOV order supports a natural, rhythmically tuned flow in conversational narratives. In several cases, first-person subjects precede reflexive or pronominal objects, as in “Jaz si zdaj pomagam” and “Mi višino tona določamo”, emphasizing speaker agency or involvement. The verb-final position frequently carries contrastive or evaluative meaning, while topic–comment structures dominate, e.g., “Mi nismo nobenega pogoja postavili” or “To me še zanima”. This suggests that Slovenian spoken syntax is shaped less by rigid grammatical constraints and more by semantic salience and information structuring in real-time discourse.
+
+SLOVENIAN OSV
+The OSV pattern in Slovenian also sees a notable rise in spoken data, increasing from 8.5% to 15.6%. This word order is typically pragmatically marked, with the object placed front and center for emphasis or contrast. In conversational speech, this often occurs with pronominal subjects and light, known objects, such as in “Se ga oče razveseli ali ne?” or “Kako frekvenčno območje pa mi slišimo?”—structures where the object is either questioned or contrasted. Other instances like “To jaz nisem” or “Tako bi jaz imela” reveal expressive usage, often conveying personal stance, surprise, or corrective focus. These patterns reflect how spoken Slovenian mobilizes fronting strategies to manage information flow dynamically, using prosody and word order to highlight key semantic content, especially in emotionally or socially charged contexts.
