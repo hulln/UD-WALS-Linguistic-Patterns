@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "dataset_tag": "nh_svo_jun_2026",
+  "generated_at": "2026-06-03T04:16:43",
+  "source_commit": "bd31cbd1272233363adf1ff38a7b17c426d83d35",
+  "query": "upos=VERB >nsubj upos=NOUN >obj upos=NOUN",
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "packages": {
+      "pandas": "2.2.3",
+      "numpy": "1.26.4",
+      "scipy": "1.14.1",
+      "matplotlib": "3.9.2",
+      "seaborn": "0.13.2",
+      "conllu": "6.0.0",
+      "tabulate": "0.10.0"
+    }
+  },
+  "metric_tolerance": 1e-06,
+  "expected_metrics": {
+    "svo_by_language_genre": {
+      "Arabic|AI": {
+        "svo_count": 448,
+        "total": 3378,
+        "svo_proportion": 0.132623
+      },
+      "Arabic|Human": {
+        "svo_count": 977,
+        "total": 4503,
+        "svo_proportion": 0.216966
+      },
+      "Bulgarian|AI": {
+        "svo_count": 8113,
+        "total": 8249,
+        "svo_proportion": 0.983513
+      },
+      "Bulgarian|Human": {
+        "svo_count": 13815,
+        "total": 14818,
+        "svo_proportion": 0.932312
+      },
+      "Chinese|AI": {
+        "svo_count": 6240,
+        "total": 6255,
+        "svo_proportion": 0.997602
+      },
+      "Chinese|Human": {
+        "svo_count": 11550,
+        "total": 11935,
+        "svo_proportion": 0.967742
+      },
+      "English|AI": {
+        "svo_count": 5984,
+        "total": 5992,
+        "svo_proportion": 0.998665
+      },
+      "English|Human": {
+        "svo_count": 22328,
+        "total": 22437,
+        "svo_proportion": 0.995142
+      },
+      "Indonesian|AI": {
+        "svo_count": 12087,
+        "total": 12134,
+        "svo_proportion": 0.996127
+      },
+      "Indonesian|Human": {
+        "svo_count": 7809,
+        "total": 7946,
+        "svo_proportion": 0.982759
+      },
+      "Russian|AI": {
+        "svo_count": 5153,
+        "total": 5477,
+        "svo_proportion": 0.940844
+      },
+      "Russian|Human": {
+        "svo_count": 6798,
+        "total": 8348,
+        "svo_proportion": 0.814327
+      },
+      "Slovenian|AI": {
+        "svo_count": 2902,
+        "total": 3248,
+        "svo_proportion": 0.893473
+      },
+      "Slovenian|Human": {
+        "svo_count": 1237,
+        "total": 1671,
+        "svo_proportion": 0.740275
+      },
+      "Urdu|AI": {
+        "svo_count": 289,
+        "total": 5729,
+        "svo_proportion": 0.050445
+      },
+      "Urdu|Human": {
+        "svo_count": 458,
+        "total": 4507,
+        "svo_proportion": 0.10162
+      }
+    },
+    "validation": {
+      "max_count_diff": 791,
+      "max_proportion_diff": 0.009318
+    }
+  },
+  "file_hashes": {
+    "scripts/run_stark_svo_analysis.py": "37c03dd5d75bdbdec5f3ca80eda8d848636939c9a3aa0f7806c79838796b5f18",
+    "scripts/validate_direct_conllu_svo.py": "dddd4d57a039737e44fb67c6ec49a33fe7b8044365808d7d3e62d001a4ceb69d",
+    "requirements.txt": "4746f69b90943fb839c99b8e9a89f7f0d15b8cde10308b68c2220d8704fdaa81",
+    "data/raw/nh_svo_jun_2026/metadata.csv": "9cfe3c01c28525709f1dcf7f9db14a36058a74dc172b2335753a4f4c2d4f4f1e",
+    "data/raw/nh_svo_jun_2026/ar_wikipedia_gpt-3.5-turbo.conllu": "f2fbf8bb68f965085b1d9547e92a534f829763a750c6c4d88f4bff5dd7518b4f",
+    "data/raw/nh_svo_jun_2026/ar_wikipedia_human.conllu": "0c028725130fe47f45abec7bdafe69245bce702c1b1d430013838d258d165fd3",
+    "data/raw/nh_svo_jun_2026/bg_true-fake-news_gpt-3.5-turbo.conllu": "34412f815cf9ca50fdf5762b35a3b247cecbe8064ad1788b747036906d0c5fdf",
+    "data/raw/nh_svo_jun_2026/bg_true-fake-news_human.conllu": "88e134f474b1ab4291eb28d94896c437d4d49dbfcf97a27599ae29ced2c4738d",
+    "data/raw/nh_svo_jun_2026/en_wikipedia_gpt-3.5-turbo.conllu": "250ff85119603315c252282f8937040b5b1e1406519b05bbbc6f621eae8915b4",
+    "data/raw/nh_svo_jun_2026/en_wikipedia_human.conllu": "6a518163678b7aa27bedbcbc4fe38b961752efe7c0a0857009c9b4176bc4464b",
+    "data/raw/nh_svo_jun_2026/id_newspapers_gpt-3.5-turbo.conllu": "2b5de8595508789248625dd947d4d3d65d49ee3485de62c3b02c0b3f0d880304",
+    "data/raw/nh_svo_jun_2026/id_newspapers_human.conllu": "54c7030107871883e8fadf224a2ba38343d496fa9efb0586bb6ba47002279b18",
+    "data/raw/nh_svo_jun_2026/ru_ruatd_gpt-3.5-turbo.conllu": "5b013eb1ad02c5f31a1a02d7a885ed906d530ba987454fc3bbab2bee5f876d40",
+    "data/raw/nh_svo_jun_2026/ru_ruatd_human.conllu": "e4ede2955e1f74a16f1312708c37cb80559ca49be67f42ed67fee9d70a855237",
+    "data/raw/nh_svo_jun_2026/sl_essays_gpt-5-grade4.conllu": "a9945c5d40f9e7f6a066da2d2c549c76a26ca6d20b4bd7ff01b49e80e2e247a0",
+    "data/raw/nh_svo_jun_2026/sl_essays_human-grade4.conllu": "6f6282c7b4d25e1089a412740fbcc7626c9f46e86e11ce282b10157319d33322",
+    "data/raw/nh_svo_jun_2026/ur_urdu-news_gpt-3.5-turbo.conllu": "f95abe997f17afbd82f4daf46103946ac205f33113572b2b424b0f9f4b50ed4c",
+    "data/raw/nh_svo_jun_2026/ur_urdu-news_human.conllu": "2b70256d27922a64ed9b8b832096b37882ddf22325111000b36651087298fcb6",
+    "data/raw/nh_svo_jun_2026/zh_baike-web-qa_chatgpt.conllu": "47c0fad7cebc6a95eee8375b074e05df2a016847207271f61035a65c04cbdd77",
+    "data/raw/nh_svo_jun_2026/zh_baike-web-qa_human.conllu": "96453fb42b3c3d28b02cd57aef002e251fb3182c800de117077fcde8355ba2b9"
+  }
+}

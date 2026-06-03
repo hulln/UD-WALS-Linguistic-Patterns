@@ -78,6 +78,9 @@ scripts in order:
 python scripts/[script_name].py
 ```
 
+Integrity check: `python scripts/make_run_manifest.py --verify` re-hashes the data
+and re-checks the headline numbers against `canonical_run_manifest.json`.
+
 ## Repository Structure
 
 Shared analysis pipeline at the top; the phase-specific deliverables are split
@@ -88,13 +91,15 @@ projects/1_written-vs-spoken-svo/
 ├── README.md                  # this guide
 │
 │   # ---- shared analysis pipeline ----
+├── canonical_run_manifest.json # input hashes + headline metrics (verifiable)
 ├── scripts/                   # numbered processing pipeline (run in order)
 │   ├── 1_compare_features.py
 │   ├── 2_fix_and_validate_conllu.py
 │   ├── 3_remove_punct_conllu.py
 │   ├── 4_clean_stark_word_order.py
 │   ├── 5_combine_both_processed.py
-│   └── 6_analyze_processed.py
+│   ├── 6_analyze_processed.py
+│   └── make_run_manifest.py   # generate/verify canonical_run_manifest.json
 ├── data/                      # inputs
 │   ├── extracted/             # STARK output + processed pattern TSVs
 │   ├── features/              # WALS/UD feature lists and info (.txt/.csv/.xlsx)

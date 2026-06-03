@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "dataset_tag": "sl_ssj_sst_written_vs_spoken",
+  "generated_at": "2026-06-03T04:17:36",
+  "source_commit": "bd31cbd1272233363adf1ff38a7b17c426d83d35",
+  "note": "Written (UD Slovenian-SSJ) vs spoken (UD Slovenian-SST) S/V/O word order.",
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "packages": {
+      "pandas": "2.2.3",
+      "numpy": "1.26.4",
+      "scipy": "1.14.1",
+      "matplotlib": "3.9.2",
+      "seaborn": "0.13.2",
+      "conllu": "6.0.0",
+      "scikit-learn": "1.5.2"
+    }
+  },
+  "metric_tolerance": 1e-06,
+  "expected_metrics": {
+    "pattern_by_corpus": {
+      "SSJ|OSV": {
+        "count": 329,
+        "proportion": 0.084489
+      },
+      "SSJ|OVS": {
+        "count": 824,
+        "proportion": 0.211608
+      },
+      "SSJ|SOV": {
+        "count": 425,
+        "proportion": 0.109142
+      },
+      "SSJ|SVO": {
+        "count": 2125,
+        "proportion": 0.545711
+      },
+      "SSJ|VOS": {
+        "count": 83,
+        "proportion": 0.021315
+      },
+      "SSJ|VSO": {
+        "count": 108,
+        "proportion": 0.027735
+      },
+      "SST|OSV": {
+        "count": 127,
+        "proportion": 0.153012
+      },
+      "SST|OVS": {
+        "count": 141,
+        "proportion": 0.16988
+      },
+      "SST|SOV": {
+        "count": 174,
+        "proportion": 0.209639
+      },
+      "SST|SVO": {
+        "count": 327,
+        "proportion": 0.393976
+      },
+      "SST|VOS": {
+        "count": 21,
+        "proportion": 0.025301
+      },
+      "SST|VSO": {
+        "count": 40,
+        "proportion": 0.048193
+      }
+    }
+  },
+  "file_hashes": {
+    "scripts/1_compare_features.py": "db30c780e13bf012665efe4c405e4a7088ae1ad5584f87968b2cf50807670606",
+    "scripts/2_fix_and_validate_conllu.py": "e4750944e0dbe19b5d1775b2b6c331eb7b83c98d78cd804cbde916a1dd1c2e8b",
+    "scripts/3_remove_punct_conllu.py": "c1e62ebc07740b603786513d30f529871dd97e1c969ee39c5ee2f56b77d502fa",
+    "scripts/4_clean_stark_word_order.py": "0242ecc578b30cc6bc6931e4afffea2521a7d34c1eec1c55b0282c542e061ee3",
+    "scripts/5_combine_both_processed.py": "4cc2262d5e8093518968fc9699f88afefcf3d68cfc14ab53f409ba4b02229108",
+    "scripts/6_analyze_processed.py": "b7ee2568000cd6f5e954caac39442263d2821622c9fa3be5932bb2053e7dbd4b",
+    "data/src/cleaned_sl_ssj-ud.conllu": "0f2cc43c1f7442ffa6005ddd1c6d413d0b39e3a192dcb7acdd790b33b218e169",
+    "data/src/fixed_sl_ssj-ud.conllu": "4ea6fa8cfd1ce54dff0243c019b401f72e298b073857507dd781735eb7e4cff0",
+    "data/src/sl_ssj-ud.conllu": "82d77d985b8718afbf1a2008fdd4ec10c5fcec8d7aa44fcc102079a724c611b8",
+    "data/src/sl_sst-ud.conllu": "8f0a7defd7a51a0bcc0b07fc69fb46bf75bf18aaaf863d38acd567f8bab36597",
+    "data/extracted/processed_combined_corpora.tsv": "c7a31ea9fea3f455df25ec80575541821e0198c251b8a2d5cea64f14640bd66a",
+    "data/extracted/processed_ssj_patterns.tsv": "c0414ebc946a720e5048fe40fd95721eef30eabbc4bd4cc8b356b1eb1c2baac1",
+    "data/extracted/processed_sst_patterns.tsv": "628afc589a3efeed755df5d65e9be66f85525cdcade8829890b7e04e5b3695fa",
+    "data/extracted/ssj_patterns.tsv": "e7be0c73f720537430d534067ed3ab8f1d7fff0383cc6f53cd147117a940b63e",
+    "data/extracted/sst_patterns.tsv": "2a6f76df32d952ce82381e24bdcb9f7ae3331f14f687bd27b1f28f796a02e12b",
+    "results/summary_table.csv": "c21b9ded8553b1a98f7ff984b37681c47a0a7ab2f364038150eefb49db9236bc",
+    "results/proportional_differences.csv": "586ee1fcec0714130ac98978406331b7eaa4de7fa3d0d13be3240d68f3846db8"
+  }
+}

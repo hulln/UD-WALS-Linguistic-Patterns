@@ -87,6 +87,13 @@ STARK_PY=/path/to/STARK/stark.py MPLCONFIGDIR=/tmp/mplconfig \
   recomputes from scratch.
 - `--process-only` rebuilds tables/figures/report from existing TSVs (no STARK).
 
+**Verify a run** against the canonical one (input hashes + headline metrics):
+
+```bash
+python3 projects/2_human-vs-ai-svo/scripts/make_run_manifest.py --verify   # check
+python3 projects/2_human-vs-ai-svo/scripts/make_run_manifest.py            # (re)generate canonical_run_manifest.json
+```
+
 ## Results
 
 Written to [`data/results/nh_svo_jun_2026/`](data/results/nh_svo_jun_2026/):
@@ -159,9 +166,13 @@ of both.
 ```text
 projects/2_human-vs-ai-svo/
 ├── README.md                  # this file
+├── Dockerfile                 # container image (run via docker compose)
+├── docker-compose.yml         # mounts repo + STARK + data; `docker compose up`
+├── canonical_run_manifest.json # input hashes + headline metrics (verifiable)
 ├── scripts/
 │   ├── run_stark_svo_analysis.py     # official pipeline (STARK → tables → report)
-│   └── validate_direct_conllu_svo.py # independent cross-check parser
+│   ├── validate_direct_conllu_svo.py # independent cross-check parser
+│   └── make_run_manifest.py          # generate/verify canonical_run_manifest.json
 ├── data/
 │   ├── raw/nh_svo_jun_2026/          # metadata.csv (.conllu gitignored)
 │   ├── interim/nh_svo_jun_2026/      # STARK TSV outputs (caches gitignored)
