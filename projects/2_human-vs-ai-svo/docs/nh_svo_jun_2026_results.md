@@ -18,9 +18,9 @@ The largest drop in the SVO share of AI relative to human text is in **Arabic** 
 | --- | --- |
 | Number of languages | 8 |
 | Genres / classes | Human, AI |
-| Total STARK runtime | 58.5 min |
-| Max STARK − direct-parser difference (count) | n/a (validation skipped) |
-| Max STARK − direct-parser difference (proportion) | n/a (validation skipped) |
+| Total STARK runtime | 0.0 min |
+| Max STARK − direct-parser difference (count) | 791 |
+| Max STARK − direct-parser difference (proportion) | 0.0093 |
 
 ## SVO shares
 
