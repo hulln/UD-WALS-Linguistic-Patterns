@@ -42,15 +42,16 @@ upos=VERB >nsubj upos=NOUN >obj upos=NOUN
 An independent CoNLL-U parser
 ([`scripts/validate_direct_conllu_svo.py`](scripts/validate_direct_conllu_svo.py))
 re-extracts the same triples a second way as a **cross-check**; the two methods
-agree to within **0.93%** on every cell. Full settings and flags:
+agree to within **0.93 percentage points** on every cell. Full settings and flags:
 [`docs/svo_ai_human_workflow.md`](docs/svo_ai_human_workflow.md).
 
 ## Data
 
 Eight language pairs (manifest:
 [`data/raw/nh_svo_jun_2026/metadata.csv`](data/raw/nh_svo_jun_2026/metadata.csv)).
-The `.conllu` corpora are gitignored (multi-GB); only the manifest is versioned.
-The last two columns are the number of extracted S/V/O triples per side.
+The `.conllu` corpora are large local files and are gitignored; the manifest,
+STARK TSV outputs, final result tables, and figures are versioned. The last two
+columns below are the number of extracted S/V/O triples per side.
 
 | Language | Source | AI model | Human | AI |
 | --- | --- | --- | ---: | ---: |
@@ -106,24 +107,23 @@ Written to [`data/results/nh_svo_jun_2026/`](data/results/nh_svo_jun_2026/):
 | `stark_vs_direct_validation.tsv` | STARK vs direct-parser cross-check |
 | `*_heatmap.png`, `*_share_by_language.png` | figures |
 
-Narrative report: [`docs/nh_svo_jun_2026_results.md`](docs/nh_svo_jun_2026_results.md).
+Narrative report:
+[`docs/nh_svo_jun_2026_results.md`](docs/nh_svo_jun_2026_results.md).
 
 **Headline — change in SVO share, AI minus Human:**
 
+The last column is in percentage points.
+
 | Language | Human | AI | AI − Human |
 | --- | ---: | ---: | ---: |
-| Slovenian | 74.0% | 89.3% | **+15.3** |
-| Russian | 81.4% | 94.1% | **+12.7** |
-| Bulgarian | 93.2% | 98.4% | +5.1 |
-| Chinese | 96.8% | 99.8% | +3.0 |
-| Indonesian | 98.3% | 99.6% | +1.3 |
-| English | 99.5% | 99.9% | +0.4 |
-| Urdu | 10.2% | 5.0% | −5.1 |
-| Arabic | 21.7% | 13.3% | −8.4 |
-
-AI text is **more rigidly SVO** (lower entropy) than human text in the
-flexible-order European/Slavic languages, but **less** SVO than human text in
-Arabic and Urdu, where the human baseline is already verb-initial / non-SVO.
+| Slovenian | 74.0% | 89.3% | **+15.3 pp** |
+| Russian | 81.4% | 94.1% | **+12.7 pp** |
+| Bulgarian | 93.2% | 98.4% | +5.1 pp |
+| Chinese | 96.8% | 99.8% | +3.0 pp |
+| Indonesian | 98.3% | 99.6% | +1.3 pp |
+| English | 99.5% | 99.9% | +0.4 pp |
+| Urdu | 10.2% | 5.0% | -5.1 pp |
+| Arabic | 21.7% | 13.3% | -8.4 pp |
 
 ## Data quality
 

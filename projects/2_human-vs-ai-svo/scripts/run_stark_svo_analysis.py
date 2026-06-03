@@ -634,20 +634,21 @@ def plot_differences(differences: pd.DataFrame, output_path: Path) -> None:
     pivot = differences.pivot(index="pattern", columns="language", values="ai_minus_human").reindex(WORD_ORDERS)
     max_abs = float(pivot.abs().max().max()) if not pivot.empty else 0.0
     max_abs = max(max_abs, 0.01)
+    pivot_pp = pivot * 100
     plt.figure(figsize=(max(7, 0.8 * len(pivot.columns)), 5.0))
     sns.heatmap(
-        pivot,
+        pivot_pp,
         annot=True,
-        fmt="+.1%",
+        fmt="+.1f",
         cmap="vlag",
         center=0,
-        vmin=-max_abs,
-        vmax=max_abs,
-        cbar_kws={"label": "AI - Human"},
+        vmin=-(max_abs * 100),
+        vmax=max_abs * 100,
+        cbar_kws={"label": "AI - Human (percentage points)"},
     )
     plt.xlabel("")
     plt.ylabel("Word Order")
-    plt.title("STARK S/V/O Differences (AI - Human)")
+    plt.title("STARK S/V/O Differences (AI - Human, pp)")
     plt.tight_layout()
     plt.savefig(output_path, dpi=300)
     plt.close()
@@ -723,8 +724,8 @@ def pct(value: float) -> str:
     return f"{value:.1%}"
 
 
-def signed_pct(value: float) -> str:
-    return f"{value:+.1%}"
+def signed_pp(value: float) -> str:
+    return f"{value * 100:+.1f} pp"
 
 
 def write_report(
@@ -750,12 +751,10 @@ def write_report(
     prop_diff_max = validation["proportion_difference_stark_minus_direct"].abs().max()
     if pd.notna(count_diff_max):
         validation_count_display = str(int(count_diff_max))
-        validation_prop_display = f"{float(prop_diff_max):.4f}"
+        validation_prop_display = f"{float(prop_diff_max) * 100:.2f} pp"
     else:
         validation_count_display = "n/a (validation skipped)"
         validation_prop_display = "n/a (validation skipped)"
-    total_seconds = sum(float(record.get("seconds", 0.0)) for record in runtime_records)
-    total_minutes = total_seconds / 60 if total_seconds else 0.0
 
     summary_table = summary.sort_values(["language", "genre"])[
         ["language", "genre", "total", "svo_count", "svo_proportion", "entropy"]
@@ -791,13 +790,14 @@ STARK outputs tree types and their frequencies. Aggregation therefore does not c
 
 ## Headline result
 
-The largest drop in the SVO share of AI relative to human text is in **{largest_drop['language']}** ({signed_pct(float(largest_drop['ai_minus_human']))}). The largest rise in the SVO share of AI is in **{largest_rise['language']}** ({signed_pct(float(largest_rise['ai_minus_human']))}).
+The largest drop in the SVO share of AI relative to human text is in **{largest_drop['language']}** ({signed_pp(float(largest_drop['ai_minus_human']))}). The largest rise in the SVO share of AI is in **{largest_rise['language']}** ({signed_pp(float(largest_rise['ai_minus_human']))}).
+
+These are differences between proportions, so prose and figures report them as **percentage points (pp)**.
 
 | Summary | Value |
 | --- | --- |
 | Number of languages | {summary['language'].nunique()} |
 | Genres / classes | Human, AI |
-| Total STARK runtime | {total_minutes:.1f} min |
 | Max STARK − direct-parser difference (count) | {validation_count_display} |
 | Max STARK − direct-parser difference (proportion) | {validation_prop_display} |
 

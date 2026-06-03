@@ -37,7 +37,7 @@ Each project folder is independent and has its own `README.md`, `scripts/`,
         ├── README.md
         ├── scripts/       # run_stark_svo_analysis.py, validate_direct_conllu_svo.py
         ├── data/          # raw/ (gitignored .conllu), interim/, results/
-        └── docs/          # workflow + Slovenian results report
+        └── docs/          # workflow + generated results report
 ```
 
 ## Setup

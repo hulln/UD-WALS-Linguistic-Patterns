@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "dataset_tag": "nh_svo_jun_2026",
-  "generated_at": "2026-06-03T04:16:43",
-  "source_commit": "bd31cbd1272233363adf1ff38a7b17c426d83d35",
+  "generated_at": "2026-06-03T05:12:18",
+  "source_commit": "d992a3160f598e2b8008e16bcb3d89fe6faad731",
   "query": "upos=VERB >nsubj upos=NOUN >obj upos=NOUN",
   "environment": {
     "python": "3.10.12",
@@ -107,7 +107,7 @@
     }
   },
   "file_hashes": {
-    "scripts/run_stark_svo_analysis.py": "37c03dd5d75bdbdec5f3ca80eda8d848636939c9a3aa0f7806c79838796b5f18",
+    "scripts/run_stark_svo_analysis.py": "1d1665e1fa0761b5e2ea30ed0c6586de5384e28ef9dc7d02baf4e476dd048d28",
     "scripts/validate_direct_conllu_svo.py": "dddd4d57a039737e44fb67c6ec49a33fe7b8044365808d7d3e62d001a4ceb69d",
     "requirements.txt": "4746f69b90943fb839c99b8e9a89f7f0d15b8cde10308b68c2220d8704fdaa81",
     "data/raw/nh_svo_jun_2026/metadata.csv": "9cfe3c01c28525709f1dcf7f9db14a36058a74dc172b2335753a4f4c2d4f4f1e",

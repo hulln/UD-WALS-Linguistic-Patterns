@@ -26,8 +26,9 @@ The raw corpora live in:
 
 `data/raw/nh_svo_jun_2026/`
 
-The `.conllu` files are gitignored (multi-GB); only the tracked `metadata.csv`
-manifest and `README.md` in that folder are versioned.
+The `.conllu` files are large local files and are gitignored. The tracked
+`metadata.csv` manifest and `README.md` in that folder document the inputs; the
+STARK TSV outputs and final results are versioned.
 
 The runner resolves all of its default paths relative to the project folder, so
 from anywhere in the repo you can simply run:
@@ -97,3 +98,4 @@ Official STARK settings:
 - `stark_vs_direct_validation.tsv`: comparison between official STARK results and direct-parser validation.
 - `stark_svo_proportions_heatmap.png`: language/genre proportions.
 - `stark_svo_ai_minus_human_heatmap.png`: centered heatmap of `AI - Human` differences.
+- `stark_svo_share_by_language.png`: SVO share by language and genre.

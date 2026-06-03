@@ -12,15 +12,16 @@ STARK outputs tree types and their frequencies. Aggregation therefore does not c
 
 ## Headline result
 
-The largest drop in the SVO share of AI relative to human text is in **Arabic** (-8.4%). The largest rise in the SVO share of AI is in **Slovenian** (+15.3%).
+The largest drop in the SVO share of AI relative to human text is in **Arabic** (-8.4 pp). The largest rise in the SVO share of AI is in **Slovenian** (+15.3 pp).
+
+These are differences between proportions, so prose and figures report them as **percentage points (pp)**.
 
 | Summary | Value |
 | --- | --- |
 | Number of languages | 8 |
 | Genres / classes | Human, AI |
-| Total STARK runtime | 0.0 min |
 | Max STARK − direct-parser difference (count) | 791 |
-| Max STARK − direct-parser difference (proportion) | 0.0093 |
+| Max STARK − direct-parser difference (proportion) | 0.93 pp |
 
 ## SVO shares
 
