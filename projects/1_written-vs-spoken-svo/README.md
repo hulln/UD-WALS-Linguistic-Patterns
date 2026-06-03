@@ -98,7 +98,7 @@ projects/1_written-vs-spoken-svo/
 ├── data/                      # inputs
 │   ├── extracted/             # STARK output + processed pattern TSVs
 │   ├── features/              # WALS/UD feature lists and info (.txt/.csv/.xlsx)
-│   └── src/                   # source CoNLL-U (UD SSJ/SST) — gitignored; see DATA.md
+│   └── src/                   # source CoNLL-U (UD SSJ/SST) — gitignored
 ├── results/                   # ALL analysis outputs (used by both phases)
 │   ├── graphs/                # chart scripts + rendered HTML/PNG (amchart, charts_2, final_svo_map)
 │   ├── analysis/              # multi-corpus comparison spreadsheets (OV/OVS_compare, post_syntaxfest_analysis, …)
@@ -128,6 +128,16 @@ projects/1_written-vs-spoken-svo/
 
 > Note: `requirements.txt` and the repository `LICENSE` live at the repo root and
 > are shared with [project 2](../2_human-vs-ai-svo/).
+
+### Source corpora
+
+The written and spoken corpora are the public Universal Dependencies Slovenian
+treebanks ([UD_Slovenian-SSJ](https://github.com/UniversalDependencies/UD_Slovenian-SSJ),
+written; [UD_Slovenian-SST](https://github.com/UniversalDependencies/UD_Slovenian-SST),
+spoken). The `.conllu` files in `data/src/` are gitignored; to recreate them,
+download the treebanks and run the preprocessing chain
+`sl_ssj-ud.conllu` → (`scripts/2_fix_and_validate_conllu.py`) → `fixed_…` →
+(`scripts/3_remove_punct_conllu.py`) → `cleaned_…` (the file STARK extracts from).
 
 ## Results: Word Order Analysis
 
