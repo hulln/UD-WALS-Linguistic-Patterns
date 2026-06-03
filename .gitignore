@@ -17,6 +17,7 @@ desktop.ini
 # via `run_stark_svo_analysis.py --process-only`.
 **/stark_svo_noun/internal_saves/
 **/stark_svo_noun/chunks/
+**/stark_svo_noun/chunk_tsv/
 
 # Regenerable run artifacts that embed absolute machine paths (STARK invocations,
 # input/output file paths). Settings are documented in docs/svo_ai_human_workflow.md.
