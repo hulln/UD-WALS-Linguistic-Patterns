@@ -5,3 +5,6 @@ numpy>=1.25
 scipy>=1.11
 conllu>=4.4
 tabulate>=0.9
+tqdm>=4.0
+pyconll>=3.1
+networkx>=3.1
