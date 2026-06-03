@@ -1,4 +1,4 @@
-# Hello everyone, my name is Nives Hüll, and my poster explores word order variation across speech and writing.
+# Hello everyone, my name is N. Hüll, and my poster explores word order variation across speech and writing.
 
 GAP		Typological databases like WALS or Grambank usually describe languages as if they had one dominant word order, like Subject–Verb–Object. But these descriptions are almost always based on written sources. That leaves out a huge part of how we actually use language: spontaneous speech. And that’s the gap this project addresses.
 

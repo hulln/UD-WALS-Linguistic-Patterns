@@ -121,7 +121,8 @@ projects/1_written-vs-spoken-svo/
 │
 │   # ---- SyntaxFest 2025 article ----
 └── syntaxfest/
-    ├── paper/                 # article, poster, presentation, figures
+    ├── paper/                 # article (PDF), talk, figures
+    ├── posters/               # poster versions, booster, alternative-formats/
     └── drafts/                # paper drafts and word-order syntheses
 ```
 
