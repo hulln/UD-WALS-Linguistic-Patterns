@@ -40,6 +40,9 @@ Each project folder is independent and has its own `README.md`, `scripts/`,
         └── docs/          # workflow + Slovenian results report
 ```
 
+Data inventory (what's tracked vs. gitignored, and where it comes from):
+[`DATA.md`](DATA.md).
+
 ## Setup
 
 ```bash

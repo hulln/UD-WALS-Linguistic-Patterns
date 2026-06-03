@@ -98,7 +98,7 @@ projects/1_written-vs-spoken-svo/
 ├── data/                      # inputs
 │   ├── extracted/             # STARK output + processed pattern TSVs
 │   ├── features/              # WALS/UD feature lists and info (.txt/.csv/.xlsx)
-│   └── src/                   # source CoNLL-U (SSJ written, SST spoken)
+│   └── src/                   # source CoNLL-U (UD SSJ/SST) — gitignored; see DATA.md
 ├── results/                   # ALL analysis outputs (used by both phases)
 │   ├── graphs/                # chart scripts + rendered HTML/PNG (amchart, charts_2, final_svo_map)
 │   ├── analysis/              # multi-corpus comparison spreadsheets (OV/OVS_compare, post_syntaxfest_analysis, …)
