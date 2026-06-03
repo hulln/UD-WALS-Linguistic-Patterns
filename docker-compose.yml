@@ -1,0 +1,14 @@
+services:
+  pipeline:
+    build:
+      context: .
+    volumes:
+      # The code repo (this folder) → /repo inside the container
+      - .:/repo
+      # STARK tool → /stark inside the container (read-only)
+      - /mnt/local-hddpool/niveshull/STARK:/stark:ro
+      # Raw .conllu corpus files → where the script expects them
+      - /mnt/local-hddpool/niveshull/nh_svo_jun_2026:/repo/projects/2_human-vs-ai-svo/data/raw/nh_svo_jun_2026
+    environment:
+      - STARK_PY=/stark/stark.py
+      - MPLCONFIGDIR=/tmp/mplconfig
