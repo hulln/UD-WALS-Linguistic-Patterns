@@ -30,3 +30,6 @@ desktop.ini
 
 # Large regenerable per-instance validation dump (~32 MB)
 **/direct_validation/direct_svo_instances.tsv
+
+# Third-party reference papers (bibliography is in references/README.md)
+**/references/papers/
