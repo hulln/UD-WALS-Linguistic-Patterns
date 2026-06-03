@@ -14,9 +14,8 @@ clause that has a noun subject and a noun object, we classify the linear order o
 the three elements as one of `SVO`, `SOV`, `VSO`, `VOS`, `OSV`, `OVS`, and compare
 the distribution between Human and AI.
 
-> **Brief (K. Dobrovoljc):** *"Metodologijo uporabi povsem enako kot nazadnje
-> (NOUN-nsubj in NOUN-obj), le da imamo tokrat namesto spoken in written dve drugi
-> zvrsti."* — Use the identical methodology as last time (NOUN subject + NOUN
+> **Task:**
+> Use the identical methodology as for SyntaxFest paper (NOUN subject + NOUN
 > object); the two varieties are now **Human** and **AI** instead of spoken and
 > written.
 
