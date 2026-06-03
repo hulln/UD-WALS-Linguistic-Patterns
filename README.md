@@ -51,9 +51,3 @@ See each project's `README.md` for how to run it.
 ## License
 
 Apache License 2.0.
-
-## Credits
-
-[N. Hüll](https://hulln.github.io/). See
-[`projects/1_written-vs-spoken-svo/README.md`](projects/1_written-vs-spoken-svo/README.md)
-for full acknowledgments.
