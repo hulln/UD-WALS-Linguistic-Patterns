@@ -26,12 +26,13 @@ Each project folder is independent and has its own `README.md`, `scripts/`,
 └── projects/
     ├── 1_written-vs-spoken-svo/
     │   ├── README.md      # project guide
-    │   ├── app/           # Streamlit app
-    │   ├── scripts/       # numbered pipeline 1..6
-    │   ├── data/          # extracted/, features/, src/ (CoNLL-U)
-    │   ├── results/       # graphs/, analysis/ spreadsheets, result CSVs/PNGs
-    │   ├── references/    # third-party papers + literature-review tracker
-    │   └── docs/          # paper/, drafts/, midterm_reports/, meeting-notes/, PDFs
+    │   ├── scripts/       # shared word-order pipeline (1..6)
+    │   ├── data/          # shared inputs: extracted/, features/, src/ (CoNLL-U)
+    │   ├── results/       # shared outputs: graphs/, analysis/, CSVs/PNGs
+    │   ├── references/    # bibliography (PDFs gitignored) + review tracker
+    │   ├── docs/          # meeting-notes/
+    │   ├── course/        # Zagreb course: app/, reports/, proposals/, PDFs
+    │   └── syntaxfest/    # SyntaxFest 2025: paper/, drafts/
     └── 2_human-vs-ai-svo/
         ├── README.md
         ├── scripts/       # run_stark_svo_analysis.py, validate_direct_conllu_svo.py

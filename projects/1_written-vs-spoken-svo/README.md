@@ -80,12 +80,14 @@ python scripts/[script_name].py
 
 ## Repository Structure
 
+Shared analysis pipeline at the top; the phase-specific deliverables are split
+into `course/` (Zagreb course) and `syntaxfest/` (the 2025 article).
+
 ```bash
 projects/1_written-vs-spoken-svo/
 ├── README.md                  # this guide
-├── app/
-│   ├── app.py                 # Streamlit app
-│   └── features_table.tsv
+│
+│   # ---- shared analysis pipeline ----
 ├── scripts/                   # numbered processing pipeline (run in order)
 │   ├── 1_compare_features.py
 │   ├── 2_fix_and_validate_conllu.py
@@ -95,23 +97,32 @@ projects/1_written-vs-spoken-svo/
 │   └── 6_analyze_processed.py
 ├── data/                      # inputs
 │   ├── extracted/             # STARK output + processed pattern TSVs
-│   ├── features/              # WALS/UD feature lists and info
-│   ├── src/                   # source CoNLL-U (SSJ written, SST spoken)
-│   └── 2_slovene_features_info.{csv,xlsx}
-├── results/                   # outputs
+│   ├── features/              # WALS/UD feature lists and info (.txt/.csv/.xlsx)
+│   └── src/                   # source CoNLL-U (SSJ written, SST spoken)
+├── results/                   # ALL analysis outputs (used by both phases)
 │   ├── graphs/                # chart scripts + rendered HTML/PNG (amchart, charts_2, final_svo_map)
 │   ├── analysis/              # multi-corpus comparison spreadsheets (OV/OVS_compare, post_syntaxfest_analysis, …)
 │   └── *.png, *.csv           # result figures and summary tables
 ├── references/                # third-party literature
-│   ├── papers/                # reference PDFs (Dryer, Greenberg, UD word-order papers, …)
+│   ├── README.md              # bibliography (the PDFs are gitignored)
 │   └── papers_review.xlsx     # literature-review tracker
-└── docs/                      # writing and documentation
-    ├── paper/                 # SyntaxFest article, poster, presentation (the Aug-2025 paper materials)
-    ├── drafts/                # paper drafts and word-order syntheses
-    ├── midterm_reports/       # course progress reports
-    ├── meeting-notes/         # research-meeting notes
-    ├── *.pdf                  # proposal, presentation, report, paper_v1
-    └── *.md                   # proposals and feedback
+├── docs/
+│   └── meeting-notes/         # research-meeting notes (both phases)
+│
+│   # ---- Zagreb "Digital Linguistics Project" course ----
+├── course/
+│   ├── app/                   # Streamlit WALS→UD feature table (Phase 1)
+│   ├── reports/               # midterm progress reports 1–3
+│   ├── proposals/             # project + analysis + model-training proposals
+│   ├── project_report.pdf
+│   ├── project_presentation.pdf
+│   ├── presentation_feedback.md
+│   └── paper_v1.pdf           # early paper draft
+│
+│   # ---- SyntaxFest 2025 article ----
+└── syntaxfest/
+    ├── paper/                 # article, poster, presentation, figures
+    └── drafts/                # paper drafts and word-order syntheses
 ```
 
 > Note: `requirements.txt` and the repository `LICENSE` live at the repo root and
@@ -133,8 +144,8 @@ The quantitative study conducted as part of this project reveals key differences
 
 ### Outputs
 Visualizations and analysis results are available in `results/` (figures, summary
-tables, and the `results/analysis/` comparison spreadsheets), and the paper
-materials are in `docs/paper/` and `docs/paper_v1.pdf`.
+tables, and the `results/analysis/` comparison spreadsheets). The SyntaxFest paper
+materials are in `syntaxfest/paper/`; the earlier course draft is `course/paper_v1.pdf`.
 
 ## License
 
