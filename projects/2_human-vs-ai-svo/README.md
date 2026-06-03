@@ -69,9 +69,10 @@ The last two columns are the number of extracted S/V/O triples per side.
 STARK is external to this repo; point at it with `STARK_PY`. Every other path is
 resolved relative to this folder, so the command works from anywhere.
 
-**On the CJVT server (Docker, from the repo root):**
+**On the CJVT server (Docker — `Dockerfile` + `docker-compose.yml` live in this folder):**
 
 ```bash
+cd projects/2_human-vs-ai-svo
 docker compose up
 ```
 
