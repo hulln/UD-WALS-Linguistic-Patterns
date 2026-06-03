@@ -1,0 +1,93 @@
+Research meeting notes (Project 1 - written vs spoken SVO)
+
+Internal notes from project/supervision meetings, condensed into English bullet
+points. Personal names and administrative details have been removed.
+
+
+================================================================
+Meeting - 2024-11-08
+================================================================
+
+Direction / topic ideas
+- Possible focus: find syntactic structures unique to speech (e.g. a parataxis
+  link that shows up as one-word clauses only in spoken data).
+- Tooling: STARK does not consider word order by default; Q-CAT ignores word
+  order and is therefore unsuitable; use STARK dep-search where needed.
+- Method to isolate speech-specific structures:
+  - Step 1: does the structure occur (yes/no)?
+  - Step 2: for the "no" cases, judge whether it is genuinely spoken-specific or
+    an annotation error.
+  - Assume the given segmentation is correct; ignore audio-specific cases unless
+    they hold for all instances.
+
+Project framing
+- Could extend the analysis to another language, or fit it under the Gravitacija
+  project (linguistic research on UD datasets).
+- Longer-term idea: ask a language model a linguistic question and let it find
+  the answer; the answers already exist in UD corpora given the right query.
+  Build an evaluation set, scope to specific tasks, and potentially fine-tune a
+  model on such a dataset (a later step, not the first).
+- WALS<->UD: for the ~190 WALS features (or a word-order subset), record
+  (a) can it be answered from a UD corpus? (b) can it be defined as a STARK
+  query? Establish a WALS-UD link to define tasks where adapting models is most
+  worthwhile.
+- Content study: pick one feature, check whether the WALS value holds in the
+  data (optionally compare Slovenian/Croatian, written vs spoken). Note WALS
+  limitations: coverage gaps, overly strict/binary categories for complex
+  phenomena.
+- Working hypothesis: it can all be found in UD data.
+
+Admin
+- SyntaxFest 2025: last week of August (26-29).
+
+
+================================================================
+Meeting - 2024-11-27
+================================================================
+
+- Goal: adapt an LLM to instill the grammatical knowledge held in corpora.
+- For evaluation and development, define concrete tasks/questions to evaluate and
+  tune the model on.
+- Representative use of UD corpora = typological questions; WALS systematically
+  describes structure.
+- Plan: go through a limited part of WALS and annotate two things per feature:
+  (a) can it be derived from UD (for Gravitacija)? (b) can it be found with STARK
+  (case study on a chosen feature)? A small methodological case study.
+- Step 1 (narrow): go through the word-order feature group; answer (1) yes/no,
+  (2) for "yes", can it be expressed as a UD-tree query.
+  - e.g. subject after vs before the verb -> count and compare; fixed word order.
+  - subject-verb -> VERB >nsubj _
+  - mark the clear-yes and clear-no cases; leave the uncertain ones aside.
+- STARK output: each node is named; one column gives the linear order of nodes.
+- Catalogue easy / medium / possible-but-complex cases; consider a graded
+  classification for step 2.
+- Grambank vs WALS: Grambank has no feature classification.
+
+
+================================================================
+Meeting - 2025-04 (paper results discussion)
+================================================================
+
+Write-up decisions
+- STARK can supply concrete examples (e.g. orders that are unusual in writing).
+- Add a short discussion paragraph setting hypotheses for future work; find one
+  reference on spoken-language word order; briefly cover the "why" with broader
+  implications (e.g. the additive nature of speech).
+- Heatmap can stay blue; add a paragraph noting there are no aligned patterns
+  within language groups because the written baseline already differs. [done]
+- Report only the orders that grow most in speech, not all; cross-check via
+  grew-match; check whether each is expected for the language.
+
+Example data entries (share written -> spoken)
+- English OSV: 2.6% -> 6.9% - marked topicalization; many conventional OSV-form
+  questions ("What's Bill doing now?").
+- Spanish SOV: 6.2% -> 20.7% - discourse focus/rhythm ("las yuntas lo trillaban").
+- Spanish OVS: 5.5% -> 19.8% - relative/complement clauses, clitic clusters.
+- French SOV: 10.2% -> 19.1% - preverbal object pronouns, left-dislocation, clefts.
+- French OSV: 4.1% -> 8.7% - clitic fronting ("je le mets ...").
+- Norwegian OSV: 2.7% -> 12.3% - mostly fronted objects in questions.
+- Norwegian OVS: 2.2% -> 9.8% - pragmatically marked declaratives ("Det veit eg ikkje").
+- Slovenian SOV: 10.9% -> 20.8% - pragmatic flexibility, topic-comment order,
+  verb-final contrast/evaluation.
+- Slovenian OSV: 8.5% -> 15.6% - object fronting for emphasis/contrast, often
+  with pronominal subjects.
